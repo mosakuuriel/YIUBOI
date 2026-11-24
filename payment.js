@@ -13,6 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const placeOrderBtn = document.getElementById("placeOrderBtn");
     const deliveryForm = document.getElementById("deliveryForm");
 
+
+
+    // BANK TRANSFER DETAILS
+
+    const bankTransferDetails = document.getElementById("bankTransferDetails");
+
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(function (input) {
+
+        input.addEventListener("change", function () {
+
+            if (this.value === "transfer") {
+                bankTransferDetails.style.display = "block";
+            } else {
+                bankTransferDetails.style.display = "none";
+            }
+
+        });
+
+    });
     let cart = [];
     let subtotal = 0;
 

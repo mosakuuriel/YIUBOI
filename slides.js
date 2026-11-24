@@ -277,10 +277,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        localStorage.setItem(
-            "yiuboiCheckoutCart",
-            JSON.stringify(cart)
-        );
+        localStorage.setItem("yiuboiCart", JSON.stringify(cart));
+        localStorage.setItem("yiuboiCheckoutCart", JSON.stringify(cart));
 
         const loggedInUser = localStorage.getItem("yiuboiUser");
 
