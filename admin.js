@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const API_BASE = "http://localhost:5000/api";
+    const API_BASE = "http://https://yiuboi.onrender.com/api";
 
     // ELEMENTS
 

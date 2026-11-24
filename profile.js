@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const API_URL = "http://localhost:5000/api/auth";
+    const API_URL = "https://yiuboi.onrender.com/api/auth";
 
     // ELEMENTS
     const loginTab = document.getElementById("loginTab");

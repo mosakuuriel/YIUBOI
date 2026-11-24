@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const API_URL = "http://localhost:5000/api/order";
+    const API_URL = "https://yiuboi.onrender.com/api/order";
 
     const cartContainer = document.getElementById("paymentCartItems");
     const subtotalElement = document.getElementById("paymentSubtotal");
