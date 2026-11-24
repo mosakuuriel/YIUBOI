@@ -1,0 +1,760 @@
+/* =========================================
+   YIUBOI SNEAKERS PAGE
+========================================= */
+
+:root {
+    --aqua-blue: #39C6C4;
+    --cyan-green: #16A89B;
+    --gold: #C6A45B;
+    --dark-text: #244B49;
+    --white: #ffffff;
+    --light-bg: #f3f9f7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark-text);
+    overflow-x: hidden;
+}
+
+p {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.yiuboi-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 3px 20px rgba(36, 75, 73, 0.04);
+}
+
+.yiuboi-header .navbar {
+    min-height: 85px;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.yiuboi-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.yiuboi-logo {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+}
+
+.yiuboi-header .navbar-collapse {
+    align-items: center;
+}
+
+.yiuboi-header .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.yiuboi-header .nav-link {
+    color: var(--dark-text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 13px !important;
+    position: relative;
+    transition: .3s ease;
+}
+
+.yiuboi-header .nav-link:hover {
+    color: var(--cyan-green);
+}
+
+.yiuboi-header .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 13px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: .3s ease;
+}
+
+.yiuboi-header .nav-link:hover::after {
+    width: calc(100% - 26px);
+}
+
+
+/* NAVBAR ACTIONS */
+
+.yiuboi-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.cart-icon,
+.yiuboi-profile {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf8f6;
+    color: var(--dark-text);
+    border-radius: 50%;
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    transition: .3s ease;
+}
+
+.cart-icon:hover,
+.yiuboi-profile:hover {
+    background: var(--cyan-green);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.yiuboi-colour-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,
+            var(--aqua-blue),
+            var(--cyan-green),
+            var(--gold));
+}
+
+
+/* NAVBAR TOGGLER */
+
+.yiuboi-header .navbar-toggler {
+    border: 1px solid rgba(22, 168, 155, .35);
+    padding: 8px 11px;
+    box-shadow: none;
+}
+
+.yiuboi-header .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(57, 198, 196, .15);
+}
+
+
+/* DESKTOP NAVBAR */
+
+@media (min-width: 851px) {
+
+    .yiuboi-header .navbar-toggler {
+        display: none !important;
+    }
+
+    .yiuboi-header .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+}
+
+
+/* MOBILE NAVBAR */
+
+@media (max-width: 850px) {
+
+    .yiuboi-header .navbar {
+        padding: 12px 15px;
+    }
+
+    .yiuboi-logo {
+        width: 125px;
+    }
+
+    .yiuboi-header .navbar-toggler {
+        display: block;
+        margin-left: auto;
+    }
+
+    .yiuboi-header .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 20px 10px;
+        background: #ffffff;
+    }
+
+    .yiuboi-header .navbar-collapse:not(.show) {
+        display: none;
+    }
+
+    .yiuboi-header .navbar-collapse.show {
+        display: block;
+    }
+
+    .yiuboi-header .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .yiuboi-header .nav-item {
+        width: 100%;
+    }
+
+    .yiuboi-header .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 10px !important;
+    }
+
+    .yiuboi-header .nav-link::after {
+        display: none;
+    }
+
+    .yiuboi-nav-actions {
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================
+   SNEAKERS HERO
+========================================= */
+
+.sneakers-hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 85px 0;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 85% 20%,
+            rgba(57, 198, 196, .15),
+            transparent 35%),
+        linear-gradient(120deg,
+            #f8fcfb,
+            #edf8f6,
+            #ffffff);
+}
+
+.sneakers-hero-content {
+    max-width: 700px;
+}
+
+.sneakers-label {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sneakers-hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin: 22px 0;
+    color: var(--dark-text);
+}
+
+.sneakers-hero h1 span {
+    color: var(--cyan-green);
+}
+
+.sneakers-hero p {
+    max-width: 550px;
+    color: #657b78;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.shop-sneakers-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: var(--cyan-green);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.shop-sneakers-btn:hover {
+    background: var(--gold);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SNEAKER COLLECTION
+========================================= */
+
+.sneaker-products {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.products-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.products-heading>span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.products-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--dark-text);
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.products-heading h2 span {
+    color: var(--cyan-green);
+}
+
+.products-heading p {
+    color: #81918e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PRODUCT CARDS
+========================================= */
+
+.sneaker-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #edf1ef;
+    transition: .4s ease;
+    overflow: hidden;
+}
+
+.sneaker-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(36, 75, 73, .10);
+    border-color: rgba(22, 168, 155, .3);
+}
+
+
+/* PRODUCT IMAGE */
+
+.sneaker-image {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            #e5f4f1,
+            #f7f0e3);
+}
+
+.sneaker-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: .6s ease;
+}
+
+.sneaker-card:hover .sneaker-image img {
+    transform: scale(1.06);
+}
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--cyan-green);
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* PRODUCT DETAILS */
+
+.sneaker-details {
+    padding: 25px;
+}
+
+.product-category {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sneaker-details h3 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--dark-text);
+    font-size: 19px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.product-price {
+    color: var(--cyan-green);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.sneaker-details label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.size-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce8e5;
+    background: #f8fcfb;
+    color: var(--dark-text);
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.size-select:focus {
+    border-color: var(--cyan-green);
+}
+
+
+/* ADD TO CART BUTTON */
+
+.add-cart-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--dark-text);
+    color: #ffffff;
+    border: none;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.add-cart-btn:hover {
+    background: var(--cyan-green);
+}
+
+
+/* =========================================
+   SHOPPING CART
+========================================= */
+
+.cart-section {
+    padding: 90px 0;
+    background: var(--light-bg);
+}
+
+.cart-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.cart-heading>span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.cart-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.cart-heading h2 span {
+    color: var(--cyan-green);
+}
+
+.empty-cart {
+    text-align: center;
+    color: #81918e;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 12px;
+    border: 1px solid #e7efec;
+}
+
+.cart-item h4 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.cart-item p {
+    color: #81918e;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.remove-item {
+    border: none;
+    background: transparent;
+    color: #c45b5b;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+/* CART TOTAL */
+
+.cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.cart-total h3 span {
+    color: var(--cyan-green);
+}
+
+#checkoutBtn {
+    padding: 15px 25px;
+    border: none;
+    background: var(--cyan-green);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#checkoutBtn:hover {
+    background: var(--gold);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.sneakers-footer {
+    padding: 55px 0 25px;
+    text-align: center;
+    background: #173f3d;
+    color: #ffffff;
+}
+
+.sneakers-footer h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.sneakers-footer p {
+    color: #c4d8d4;
+    font-size: 13px;
+}
+
+.sneakers-footer a {
+    display: inline-block;
+    color: var(--gold);
+    text-decoration: none;
+    margin: 15px 0 30px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .sneakers-hero {
+        min-height: auto;
+        padding: 65px 0;
+    }
+
+    .sneakers-hero h1 {
+        font-size: 45px;
+    }
+
+    .sneakers-hero p {
+        font-size: 13px;
+    }
+
+    .sneaker-products {
+        padding: 70px 0;
+    }
+
+    .sneaker-image {
+        height: 250px;
+    }
+
+    .products-heading {
+        margin-bottom: 40px;
+    }
+
+    .cart-section {
+        padding: 65px 0;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 850px) {
+
+    .sneakers-hero h1 {
+        font-size: 37px;
+    }
+
+    .sneaker-details {
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-total {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #checkoutBtn {
+        width: 100%;
+    }
+
+}
+
+
+/* NAVBAR LAYOUT FIX */
+
+/* DESKTOP */
+@media (min-width: 851px) {
+
+    .yiuboi-header .navbar>.container-fluid {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .yiuboi-header .navbar-collapse {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .yiuboi-header .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .yiuboi-nav-actions {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+
+    .yiuboi-header .navbar>.container-fluid {
+        flex-wrap: wrap;
+    }
+
+    .yiuboi-header .navbar-collapse:not(.show) {
+        display: none !important;
+    }
+
+    .yiuboi-header .navbar-collapse.show {
+        display: block !important;
+    }
+
+    .yiuboi-header .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

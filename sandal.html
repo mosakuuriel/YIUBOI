@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sandals Collection | YIUBOI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="icon" href="images/yiuboi-logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="sandal.css">
+    <link rel="stylesheet" href="drakmode.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand yiuboi-brand">
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar"
+                    aria-controls="yiuboiNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#how-we-work" class="nav-link">How We Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Shop
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="footwear.html" class="dropdown-item">
+                                        <i class="fa-solid fa-shoe-prints"></i>
+                                        Footwear
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="watches.html" class="dropdown-item">
+                                        <i class="fa-regular fa-clock"></i>
+                                        Watches
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="yiuboi-nav-actions">
+
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <!-- SEARCH -->
+                        <form class="yiuboi-search" id="yiuboiSearchForm">
+
+                            <input type="text" id="yiuboiSearchInput" placeholder="Search sneakers, watches..."
+                                autocomplete="off" aria-label="Search products">
+
+                            <button type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <div class="search-results" id="searchResults"></div>
+
+                        </form>
+
+                        <a href="profile.html" class="yiuboi-profile" aria-label="My profile">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="sandals-hero">
+
+        <div class="sandals-hero-overlay"></div>
+
+        <div class="container">
+
+            <div class="sandals-hero-content" data-aos="fade-up">
+
+                <span class="sandals-label">
+                    YIUBOI FOOTWEAR COLLECTION
+                </span>
+
+                <h1>
+                    Step Into <span>Comfort.</span>
+                </h1>
+
+                <p>
+                    Discover sandals that bring together everyday comfort,
+                    effortless style and lasting confidence.
+                </p>
+
+                <a href="#sandals-collection" class="sandals-hero-btn">
+                    Explore Sandals
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="sandals-intro">
+
+        <div class="container">
+
+            <div class="sandals-intro-content" data-aos="fade-up">
+
+                <span>THE SANDALS COLLECTION</span>
+
+                <h2>
+                    Comfort Meets <span>Style.</span>
+                </h2>
+
+                <p>
+                    From relaxed everyday looks to stylish outings,
+                    find sandals designed to complement your lifestyle.
+                    Explore our collection and find your perfect pair.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="sandals-products" id="sandals-collection">
+
+        <div class="container">
+
+            <div class="sandals-section-heading" data-aos="fade-up">
+
+                <span>OUR COLLECTION</span>
+
+                <h2>Explore Our Sandals</h2>
+
+                <p>Find the pair that matches your style.</p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+
+                    <div class="sandals-card">
+
+                        <div class="sandals-image">
+
+                            <img src="images/san2.jpg" alt="Classic Sandals">
+
+                            <span class="sandals-badge">Popular</span>
+
+                        </div>
+
+                        <div class="sandals-card-content">
+
+                            <span class="product-category">EVERYDAY COLLECTION</span>
+
+                            <h3>Classic Sandals</h3>
+
+                            <p class="product-price">₦25,000</p>
+
+                            <label for="sandalSize1">Select Size</label>
+
+                            <select id="sandalSize1" class="sandals-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="sandals-add-btn add-cart-btn" data-name="Classic Sandals" data-price="25000"
+                                data-size="sandalSize1">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="sandals-card">
+
+                        <div class="sandals-image">
+
+                            <img src="images/san3.jpg" alt="Premium Leather Sandals">
+
+                            <span class="sandals-badge">Premium</span>
+
+                        </div>
+
+                        <div class="sandals-card-content">
+
+                            <span class="product-category">PREMIUM COLLECTION</span>
+
+                            <h3>Leather Sandals</h3>
+
+                            <p class="product-price">₦32,000</p>
+
+                            <label for="sandalSize2">Select Size</label>
+
+                            <select id="sandalSize2" class="sandals-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="sandals-add-btn add-cart-btn" data-name="Leather Sandals" data-price="32000"
+                                data-size="sandalSize2">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+                    <div class="sandals-card">
+
+                        <div class="sandals-image">
+
+                            <img src="images/san4.jpg" alt="Modern Casual Sandals">
+
+                        </div>
+
+                        <div class="sandals-card-content">
+
+                            <span class="product-category">CASUAL COLLECTION</span>
+
+                            <h3>Modern Casual Sandals</h3>
+
+                            <p class="product-price">₦28,000</p>
+
+                            <label for="sandalSize3">Select Size</label>
+
+                            <select id="sandalSize3" class="sandals-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="sandals-add-btn add-cart-btn" data-name="Modern Casual Sandals"
+                                data-price="28000" data-size="sandalSize3">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <section class="sandals-cart-section" id="sandals-cart">
+
+        <div class="container">
+
+            <div class="sandals-cart-heading">
+
+                <span>YOUR SELECTION</span>
+
+                <h2>
+                    Shopping Cart
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </h2>
+
+            </div>
+
+
+            <div class="sandals-cart-box">
+
+                <div id="cartItems"></div>
+
+                <div class="sandals-cart-summary">
+
+                    <h3>
+                        Total:
+                        <span id="cartTotal">₦0</span>
+                    </h3>
+
+                    <button id="checkoutBtn">
+                        Proceed to Checkout
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="sandals-footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="footer-logo">
+
+                    <p>
+                        Where Every Step Counts.
+                        Discover footwear that combines comfort,
+                        confidence and style.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="footwear.html">Footwear</a>
+                    <a href="sneakers.html">Sneakers</a>
+                    <a href="casual.html">Casual Shoes</a>
+                    <a href="formal.html">Formal Shoes</a>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>Explore More</h4>
+
+                    <a href="sandals.html">Sandals</a>
+                    <a href="boots.html">Boots</a>
+                    <a href="slides.html">Slides</a>
+                    <a href="watches.html">Watches</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="sandals-footer-bottom">
+
+                <p>
+                    &copy; 2026 YIUBOI. All Rights Reserved.
+                </p>
+
+                <span>Where Every Step Counts.</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="sandal.js"></script>
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+</body>
+
+</html>

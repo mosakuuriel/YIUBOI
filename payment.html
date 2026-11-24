@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | YIUBOI</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+
+    <!-- PAYMENT CSS -->
+    <link rel="stylesheet" href="payment.css">
+
+    <!-- SHARED DARK MODE CSS -->
+    <link rel="stylesheet" href="drakmode.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="payment-header">
+
+        <a href="index.html" class="payment-page-logo">
+            <img src="images/yiuboi-logo.png" alt="YIUBOI Logo">
+        </a>
+
+        <div class="payment-header-actions">
+
+            <a href="profile.html" class="payment-account">
+                <i class="fa-regular fa-user"></i>
+                <span>My Account</span>
+            </a>
+
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Switch to dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CHECKOUT HERO
+    ========================== -->
+
+    <section class="payment-hero">
+
+        <div class="payment-hero-content">
+
+            <span class="payment-label">SECURE CHECKOUT</span>
+
+            <h1>Complete Your <span>Purchase.</span></h1>
+
+            <p>
+                You're just a few steps away from enjoying your YIUBOI purchase.
+            </p>
+
+            <div class="checkout-progress">
+
+                <div class="progress-step active">
+                    <span>1</span>
+                    <small>Cart</small>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step active">
+                    <span>2</span>
+                    <small>Details</small>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span>3</span>
+                    <small>Payment</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAYMENT SECTION
+    ========================== -->
+
+    <main class="payment-section">
+
+        <div class="payment-container">
+
+            <div class="payment-main">
+
+                <!-- DELIVERY INFORMATION -->
+
+                <section class="payment-card">
+
+                    <div class="payment-card-heading">
+
+                        <div>
+                            <span class="payment-number">01</span>
+                            <h2>Delivery Information</h2>
+                        </div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <p class="payment-description">
+                        Where should we deliver your order?
+                    </p>
+
+                    <form id="deliveryForm">
+
+                        <div class="payment-form-grid">
+
+                            <div class="payment-form-group">
+                                <label for="customerName">Full Name</label>
+                                <input type="text" id="customerName" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="payment-form-group">
+                                <label for="customerEmail">Email Address</label>
+                                <input type="email" id="customerEmail" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="payment-form-group">
+                                <label for="customerPhone">Phone Number</label>
+                                <input type="tel" id="customerPhone" placeholder="+234..." required>
+                            </div>
+
+                            <div class="payment-form-group">
+                                <label for="customerState">State</label>
+                                <input type="text" id="customerState" placeholder="Enter your state" required>
+                            </div>
+
+                            <div class="payment-form-group full-width">
+                                <label for="customerAddress">Delivery Address</label>
+                                <textarea id="customerAddress" rows="3"
+                                    placeholder="Enter your complete delivery address" required></textarea>
+                            </div>
+
+                            <div class="payment-form-group full-width">
+                                <label for="customerLandmark">
+                                    Nearest Landmark (Optional)
+                                </label>
+
+                                <input type="text" id="customerLandmark"
+                                    placeholder="E.g. Near a school, filling station...">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- PAYMENT METHOD -->
+
+                <section class="payment-card">
+
+                    <div class="payment-card-heading">
+
+                        <div>
+                            <span class="payment-number">02</span>
+                            <h2>Payment Method</h2>
+                        </div>
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <p class="payment-description">
+                        Choose how you would like to pay.
+                    </p>
+
+                    <div class="payment-methods">
+
+                        <label class="payment-method-option">
+
+                            <input type="radio" name="paymentMethod" value="card" required>
+
+                            <span class="payment-method-icon">
+                                <i class="fa-regular fa-credit-card"></i>
+                            </span>
+
+                            <span class="payment-method-info">
+                                <strong>Debit / Credit Card</strong>
+                                <small>Pay securely with your bank card.</small>
+                            </span>
+
+                            <i class="fa-solid fa-circle-check payment-check"></i>
+
+                        </label>
+
+
+                        <label class="payment-method-option">
+
+                            <input type="radio" name="paymentMethod" value="transfer">
+
+                            <span class="payment-method-icon">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </span>
+
+                            <span class="payment-method-info">
+                                <strong>Bank Transfer</strong>
+                                <small>Pay directly from your bank account.</small>
+                            </span>
+
+                            <i class="fa-solid fa-circle-check payment-check"></i>
+
+                        </label>
+
+                    </div>
+
+                    <div class="payment-security-note">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Your payment details should be handled through a secure payment provider.
+                        </span>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="order-summary-card">
+
+                <div class="order-summary-heading">
+
+                    <h2>Your Order</h2>
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+                <div id="paymentCartItems" class="payment-cart-items">
+
+                    <div class="payment-empty-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p>Your cart items will appear here.</p>
+                    </div>
+
+                </div>
+
+                <div class="order-summary-divider"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="paymentSubtotal">₦0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <strong id="paymentDelivery">To be confirmed</strong>
+                </div>
+
+                <div class="order-summary-divider"></div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="paymentTotal">₦0</strong>
+                </div>
+
+                <button type="button" id="placeOrderBtn" class="place-order-btn">
+                    Continue to Payment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p class="order-terms">
+                    By continuing, you agree to YIUBOI's terms and conditions.
+                </p>
+
+                <a href="index.html" class="continue-shopping">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="payment-footer">
+
+        <a href="index.html" class="payment-footer-logo">
+            YIUBOI
+        </a>
+
+        <p>Where Every Step Counts.</p>
+
+        <span>&copy; 2026 YIUBOI. All Rights Reserved.</span>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="payment.js"></script>
+    <script src="drakmode.js"></script>
+
+</body>
+
+</html>

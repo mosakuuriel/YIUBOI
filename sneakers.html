@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YIUBOI | Sneakers Collection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="sneakers.css">
+    <link rel="stylesheet" href="drakmode.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="footwear.html" class="nav-link">Footwear</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="yiuboi-nav-actions">
+
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <a href="#sneaker-cart" class="cart-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span id="cartCount">0</span>
+                        </a>
+
+                        <a href="profile.html" class="yiuboi-profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+    <!-- SNEAKERS HERO -->
+
+    <section class="sneakers-hero">
+
+        <div class="container">
+
+            <div class="sneakers-hero-content" data-aos="fade-up">
+
+                <span class="sneakers-label">
+                    THE YIUBOI COLLECTION
+                </span>
+
+                <h1>
+                    Sneakers That <br>
+                    <span>Define Your Style.</span>
+                </h1>
+
+                <p>
+                    Discover sneakers designed to complement your style,
+                    bring comfort to your everyday movement and make
+                    every step count.
+                </p>
+
+                <a href="#sneaker-products" class="shop-sneakers-btn">
+                    Shop Sneakers
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SNEAKER COLLECTION -->
+
+    <section class="sneaker-products" id="sneaker-products">
+
+        <div class="container">
+
+            <div class="products-heading" data-aos="fade-up">
+
+                <span>OUR SELECTION</span>
+
+                <h2>Explore the <span>Sneakers.</span></h2>
+
+                <p>
+                    Find your perfect pair from our sneaker collection.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- SNEAKER 1 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="sneaker-card" data-aos="fade-up">
+
+                        <div class="sneaker-image">
+
+                            <img src="images/78a7745a54a0d3b5d9751e300dfc5478.jpg" alt="Sneaker One">
+
+                            <span class="product-tag">NEW ARRIVAL</span>
+
+                        </div>
+
+                        <div class="sneaker-details">
+
+                            <span class="product-category">YIUBOI SNEAKERS</span>
+
+                            <h3>Classic Street Sneakers</h3>
+
+                            <p class="product-price">₦35,000</p>
+
+                            <label for="size1">Select Size</label>
+
+                            <select id="size1" class="size-select">
+                                <option value="">Choose size</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+
+                            <button class="add-cart-btn" data-name="Classic Street Sneakers" data-price="35000"
+                                data-size="size1">
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SNEAKER 2 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="sneaker-card" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="sneaker-image">
+
+                            <img src="images/7909d100077cafbf326307e770bf2cc1.jpg" alt="Sneaker Two">
+
+                            <span class="product-tag">POPULAR</span>
+
+                        </div>
+
+                        <div class="sneaker-details">
+
+                            <span class="product-category">YIUBOI SNEAKERS</span>
+
+                            <h3>Urban Runner Sneakers</h3>
+
+                            <p class="product-price">₦42,000</p>
+
+                            <label for="size2">Select Size</label>
+
+                            <select id="size2" class="size-select">
+                                <option value="">Choose size</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+
+                            <button class="add-cart-btn" data-name="Urban Runner Sneakers" data-price="42000"
+                                data-size="size2">
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SNEAKER 3 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="sneaker-card" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="sneaker-image">
+
+                            <img src="images/56a798af5e7b296201f407e5bb143916.jpg" alt="Sneaker Three">
+
+                        </div>
+
+                        <div class="sneaker-details">
+
+                            <span class="product-category">YIUBOI SNEAKERS</span>
+
+                            <h3>Premium Casual Sneakers</h3>
+
+                            <p class="product-price">₦38,000</p>
+
+                            <label for="size3">Select Size</label>
+
+                            <select id="size3" class="size-select">
+                                <option value="">Choose size</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+
+                            <button class="add-cart-btn" data-name="Premium Casual Sneakers" data-price="38000"
+                                data-size="size3">
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART SECTION -->
+
+    <section class="cart-section" id="sneaker-cart">
+
+        <div class="container">
+
+            <div class="cart-heading">
+
+                <span>YOUR SELECTION</span>
+
+                <h2>Your Shopping <span>Cart.</span></h2>
+
+            </div>
+
+            <div id="cartItems">
+
+                <p class="empty-cart">
+                    Your cart is currently empty.
+                </p>
+
+            </div>
+
+            <div class="cart-total">
+
+                <h3>Total: <span id="cartTotal">₦0</span></h3>
+
+                <button id="checkoutBtn">
+                    Proceed to Checkout
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="sneakers-footer">
+
+        <div class="container">
+
+            <h3>YIUBOI</h3>
+
+            <p>Where Every Step Counts.</p>
+
+            <a href="footwear.html">Back to Footwear</a>
+
+            <p class="copyright">
+                &copy; <span id="footerYear"></span> YIUBOI. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="sneakers.js"></script>
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+</body>
+
+</html>

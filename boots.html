@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boots Collection | YIUBOI</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="boots.css">
+    <link rel="stylesheet" href="drakmode.css">
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand yiuboi-brand">
+
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar"
+                    aria-controls="yiuboiNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#how-we-work" class="nav-link">How We Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Shop
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="footwear.html" class="dropdown-item">
+                                        <i class="fa-solid fa-shoe-prints"></i>
+                                        Footwear
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="watches.html" class="dropdown-item">
+                                        <i class="fa-regular fa-clock"></i>
+                                        Watches
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="yiuboi-nav-actions">
+
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <!-- SEARCH -->
+                        <form class="yiuboi-search" id="yiuboiSearchForm">
+
+                            <input type="text" id="yiuboiSearchInput" placeholder="Search sneakers, watches..."
+                                autocomplete="off" aria-label="Search products">
+
+                            <button type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <div class="search-results" id="searchResults"></div>
+
+                        </form>
+
+
+                        <a href="profile.html" class="yiuboi-profile" aria-label="My profile">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="boots-hero">
+
+        <div class="boots-hero-overlay"></div>
+
+        <div class="container">
+
+            <div class="boots-hero-content" data-aos="fade-up">
+
+                <span class="boots-label">
+                    YIUBOI FOOTWEAR COLLECTION
+                </span>
+
+                <h1>
+                    Built for <span>Every Step.</span>
+                </h1>
+
+                <p>
+                    Make a statement with boots that combine bold design,
+                    durability and everyday confidence.
+                </p>
+
+                <a href="#boots-collection" class="boots-hero-btn">
+
+                    Explore Boots
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="boots-intro">
+
+        <div class="container">
+
+            <div class="boots-intro-content" data-aos="fade-up">
+
+                <span>THE BOOTS COLLECTION</span>
+
+                <h2>
+                    Strong Style. <span>Lasting Impression.</span>
+                </h2>
+
+                <p>
+                    Discover boots designed to bring character to your
+                    wardrobe. Whether you prefer a classic appearance
+                    or a modern statement, find your next favourite pair
+                    at YIUBOI.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCT COLLECTION ================= -->
+
+    <section class="boots-products" id="boots-collection">
+
+        <div class="container">
+
+            <div class="boots-section-heading" data-aos="fade-up">
+
+                <span>OUR COLLECTION</span>
+
+                <h2>Explore Our Boots</h2>
+
+                <p>Find the perfect pair for your personal style.</p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+
+                    <div class="boots-card">
+
+                        <div class="boots-image">
+
+                            <img src="images/bt4.avif" alt="Classic Leather Boots">
+
+                            <span class="boots-badge">Popular</span>
+
+                        </div>
+
+                        <div class="boots-card-content">
+
+                            <span class="product-category">
+                                CLASSIC COLLECTION
+                            </span>
+
+                            <h3>Classic Leather Boots</h3>
+
+                            <p class="product-price">₦45,000</p>
+
+                            <label for="bootsSize1">Select Size</label>
+
+                            <select id="bootsSize1" class="boots-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="boots-add-btn add-cart-btn" data-name="Classic Leather Boots"
+                                data-price="45000" data-size="bootsSize1">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+
+                    <div class="boots-card">
+
+                        <div class="boots-image">
+
+                            <img src="images/bt3.jpg" alt="Urban Ankle Boots">
+
+                            <span class="boots-badge">Trending</span>
+
+                        </div>
+
+                        <div class="boots-card-content">
+
+                            <span class="product-category">
+                                URBAN COLLECTION
+                            </span>
+
+                            <h3>Urban Ankle Boots</h3>
+
+                            <p class="product-price">₦40,000</p>
+
+                            <label for="bootsSize2">Select Size</label>
+
+                            <select id="bootsSize2" class="boots-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="boots-add-btn add-cart-btn" data-name="Urban Ankle Boots" data-price="40000"
+                                data-size="bootsSize2">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+                    <div class="boots-card">
+
+                        <div class="boots-image">
+
+                            <img src="images/bt2.jpg" alt="Premium Fashion Boots">
+
+                        </div>
+
+                        <div class="boots-card-content">
+
+                            <span class="product-category">
+                                PREMIUM COLLECTION
+                            </span>
+
+                            <h3>Premium Fashion Boots</h3>
+
+                            <p class="product-price">₦50,000</p>
+
+                            <label for="bootsSize3">Select Size</label>
+
+                            <select id="bootsSize3" class="boots-size">
+
+                                <option value="">Choose shoe size</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+
+                            </select>
+
+                            <button class="boots-add-btn add-cart-btn" data-name="Premium Fashion Boots"
+                                data-price="50000" data-size="bootsSize3">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SHOPPING CART ================= -->
+
+    <section class="boots-cart-section" id="boots-cart">
+
+        <div class="container">
+
+            <div class="boots-cart-heading">
+
+                <span>YOUR SELECTION</span>
+
+                <h2>
+                    Shopping Cart
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </h2>
+
+            </div>
+
+
+            <div class="boots-cart-box">
+
+                <div id="cartItems"></div>
+
+                <div class="boots-cart-summary">
+
+                    <h3>
+                        Total:
+                        <span id="cartTotal">₦0</span>
+                    </h3>
+
+                    <button id="checkoutBtn">
+
+                        Proceed to Checkout
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="boots-footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="footer-logo">
+
+                    <p>
+                        Where Every Step Counts.
+                        Discover footwear that combines comfort,
+                        confidence and style.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="footwear.html">Footwear</a>
+                    <a href="sneakers.html">Sneakers</a>
+                    <a href="casual.html">Casual Shoes</a>
+                    <a href="formal.html">Formal Shoes</a>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>Explore More</h4>
+
+                    <a href="sandals.html">Sandals</a>
+                    <a href="boots.html">Boots</a>
+                    <a href="slides.html">Slides</a>
+                    <a href="watches.html">Watches</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="boots-footer-bottom">
+
+                <p>&copy; 2026 YIUBOI. All Rights Reserved.</p>
+
+                <span>Where Every Step Counts.</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- CUSTOM JS -->
+
+    <script src="boots.js"></script>
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+</body>
+
+</html>

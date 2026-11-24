@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YIUBOI | Admin Panel</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         ADMIN LOGIN
+    =============================== -->
+
+    <section id="adminLogin" class="admin-login">
+
+        <div class="login-container">
+
+            <div class="admin-logo">
+                <h2>YIU<span>BOI</span></h2>
+                <p>ADMINISTRATION</p>
+            </div>
+
+            <div class="login-heading">
+                <h3>Welcome Back</h3>
+                <p>Sign in to manage your store.</p>
+            </div>
+
+            <form id="adminLoginForm">
+
+                <div class="form-group">
+                    <label for="adminEmail">Email Address</label>
+
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="adminEmail" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="adminPassword" placeholder="Enter your password" required>
+
+                        <button type="button" id="togglePassword">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="loginMessage"></div>
+
+                <button type="submit" id="loginButton">
+                    Sign In <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <p class="login-footer">
+                YIUBOI Administration &copy; 2026
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         ADMIN DASHBOARD
+    =============================== -->
+
+    <section id="adminDashboard" class="admin-dashboard" hidden>
+
+        <!-- SIDEBAR -->
+
+        <aside class="admin-sidebar" id="adminSidebar">
+
+            <div class="sidebar-logo">
+                <h2>YIU<span>BOI</span></h2>
+                <small>ADMIN PANEL</small>
+            </div>
+
+            <div class="sidebar-menu">
+
+                <p class="menu-heading">MAIN MENU</p>
+
+                <a href="#overview" class="sidebar-link active" data-section="overview">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#products" class="sidebar-link" data-section="products">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Products</span>
+                </a>
+
+                <a href="#orders" class="sidebar-link" data-section="orders">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Orders</span>
+                </a>
+
+                <a href="#customers" class="sidebar-link" data-section="customers">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Customers</span>
+                </a>
+
+                <a href="#payments" class="sidebar-link" data-section="payments">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payments</span>
+                </a>
+
+                <p class="menu-heading">ACCOUNT</p>
+
+                <a href="#settings" class="sidebar-link" data-section="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="admin-profile">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div>
+                        <h6 id="adminName">Administrator</h6>
+                        <small>Super Admin</small>
+                    </div>
+                </div>
+
+                <button id="logoutButton" class="logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+            <!-- TOPBAR -->
+
+            <header class="admin-topbar">
+
+                <div class="topbar-left">
+
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <h4>Admin Dashboard</h4>
+                        <p>Manage your YIUBOI store.</p>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <span class="admin-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Online
+                    </span>
+
+                    <div class="topbar-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+
+            <div class="dashboard-content">
+
+                <!-- OVERVIEW -->
+
+                <section id="overviewSection" class="dashboard-section active">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Overview</h3>
+                            <p>Here's what's happening with your store.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-box"></i>
+                            </div>
+                            <p>Total Products</p>
+                            <h3 id="totalProducts">—</h3>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <p>Total Orders</p>
+                            <h3 id="totalOrders">—</h3>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <p>Total Customers</p>
+                            <h3 id="totalCustomers">—</h3>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <p>Total Revenue</p>
+                            <h3 id="totalRevenue">—</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="panel-heading">
+                            <h5>Recent Orders</h5>
+                            <a href="#orders" data-section="orders">View All</a>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="recentOrders">
+                                    <tr>
+                                        <td colspan="5">No orders loaded yet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- PRODUCTS -->
+
+                <section id="productsSection" class="dashboard-section">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Products</h3>
+                            <p>Manage your store products.</p>
+                        </div>
+
+                        <button class="primary-button" id="addProductButton">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Product
+                        </button>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="productsTable">
+                                    <tr>
+                                        <td colspan="5">Products will appear here.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ORDERS -->
+
+                <section id="ordersSection" class="dashboard-section">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Orders</h3>
+                            <p>View and manage customer orders.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="ordersTable">
+                                    <tr>
+                                        <td colspan="6">Orders will appear here.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- CUSTOMERS -->
+
+                <section id="customersSection" class="dashboard-section">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Customers</h3>
+                            <p>View registered YIUBOI customers.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Joined</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="customersTable">
+                                    <tr>
+                                        <td colspan="4">Customers will appear here.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENTS -->
+
+                <section id="paymentsSection" class="dashboard-section">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Payments</h3>
+                            <p>Monitor customer payments and transactions.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID</th>
+                                        <th>Order ID</th>
+                                        <th>Amount</th>
+                                        <th>Method</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="paymentsTable">
+                                    <tr>
+                                        <td colspan="6">Payments will appear here.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- SETTINGS -->
+
+                <section id="settingsSection" class="dashboard-section">
+
+                    <div class="page-heading">
+                        <div>
+                            <h3>Settings</h3>
+                            <p>Manage your administrator account.</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-panel">
+                        <h5>Administrator Information</h5>
+
+                        <p>
+                            Name:
+                            <strong id="settingsAdminName">Administrator</strong>
+                        </p>
+
+                        <p>
+                            Email:
+                            <strong id="settingsAdminEmail">—</strong>
+                        </p>
+
+                        <p>
+                            Role:
+                            <strong>Administrator</strong>
+                        </p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ADMIN JS -->
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

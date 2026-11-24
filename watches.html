@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YIUBOI Watches | Where Every Step Counts</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="watches.css">
+    <link rel="stylesheet" href="drakmode.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand yiuboi-brand">
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar"
+                    aria-controls="yiuboiNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#how-we-work" class="nav-link">How We Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Shop
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="footwear.html" class="dropdown-item">
+                                        <i class="fa-solid fa-shoe-prints me-2"></i>
+                                        Footwear
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="watches.html" class="dropdown-item">
+                                        <i class="fa-regular fa-clock me-2"></i>
+                                        Watches
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="yiuboi-nav-actions">
+
+
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <!-- SEARCH -->
+                        <form class="yiuboi-search" id="yiuboiSearchForm">
+
+                            <input type="text" id="yiuboiSearchInput" placeholder="Search sneakers, watches..."
+                                autocomplete="off" aria-label="Search products">
+
+                            <button type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <div class="search-results" id="searchResults"></div>
+
+                        </form>
+
+                        <a href="profile.html" class="yiuboi-profile" aria-label="My profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="watch-hero">
+
+        <div class="watch-hero-content" data-aos="fade-up">
+
+            <span class="watch-label">THE YIUBOI WATCH COLLECTION</span>
+
+            <h1>
+                Time Is More Than<br>
+                Just A Moment.
+            </h1>
+
+            <p>
+                Discover watches that bring together timeless style,
+                confidence and everyday elegance.
+            </p>
+
+            <a href="#watch-series" class="watch-hero-btn">
+                Explore Watches
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT WATCHES
+    ========================== -->
+
+    <section class="watch-intro">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6" data-aos="fade-right">
+
+                    <span class="section-label">ABOUT OUR COLLECTION</span>
+
+                    <h2>
+                        Every Second Deserves
+                        <span>Great Style.</span>
+                    </h2>
+
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+
+                    <p>
+                        At YIUBOI, we believe a watch is more than an instrument
+                        for telling time. It is an expression of personality,
+                        confidence and individual style.
+
+                        Our watch collection brings together designs for
+                        different tastes and occasions, helping you make
+                        every moment count.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WATCH SERIES
+    ========================== -->
+
+    <section class="watch-series" id="watch-series">
+
+        <div class="container">
+
+            <div class="watch-section-heading" data-aos="fade-up">
+
+                <span class="section-label">FIND YOUR STYLE</span>
+
+                <h2>Explore Our Watch Series</h2>
+
+                <p>
+                    Discover a collection designed to complement
+                    your everyday look.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4" id="watchProducts">
+
+
+                <!-- WATCH 1 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+
+                    <div class="watch-card">
+
+                        <div class="watch-image">
+
+                            <img src="images/series3.jpg" alt="Watch Series One">
+
+                            <span class="watch-badge">NEW</span>
+
+                        </div>
+
+                        <div class="watch-details">
+
+                            <span class="watch-category">YIUBOI COLLECTION</span>
+
+                            <h3>Watch Series 01</h3>
+
+                            <p>
+                                A refined design made for everyday confidence.
+                            </p>
+
+                            <div class="watch-price">₦45,000</div>
+
+                            <button class="add-watch-btn" data-id="watch-01" data-name="Watch Series 01"
+                                data-price="45000" data-image="">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WATCH 2 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="watch-card">
+
+                        <div class="watch-image">
+
+                            <img src="images/series2.jpg" alt="Watch Series Two">
+
+                        </div>
+
+                        <div class="watch-details">
+
+                            <span class="watch-category">YIUBOI COLLECTION</span>
+
+                            <h3>Watch Series 02</h3>
+
+                            <p>
+                                A distinctive look for those who appreciate
+                                simplicity.
+                            </p>
+
+                            <div class="watch-price">₦55,000</div>
+
+                            <button class="add-watch-btn" data-id="watch-02" data-name="Watch Series 02"
+                                data-price="55000" data-image="">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WATCH 3 -->
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="watch-card">
+
+                        <div class="watch-image">
+
+                            <img src="images/series1.jpg" alt="Watch Series Three">
+
+                        </div>
+
+                        <div class="watch-details">
+
+                            <span class="watch-category">YIUBOI COLLECTION</span>
+
+                            <h3>Watch Series 03</h3>
+
+                            <p>
+                                A bold design that makes a lasting impression.
+                            </p>
+
+                            <div class="watch-price">₦65,000</div>
+
+                            <button class="add-watch-btn" data-id="watch-03" data-name="Watch Series 03"
+                                data-price="65000" data-image="">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SHOPPING CART
+    ========================== -->
+
+    <section class="watch-cart-section" id="watch-cart">
+
+        <div class="container">
+
+            <div class="cart-heading">
+
+                <span class="section-label">YOUR SELECTION</span>
+
+                <h2>Shopping Cart</h2>
+
+                <p>
+                    Your selected YIUBOI watches will appear here.
+                </p>
+
+            </div>
+
+
+            <div class="watch-cart-box">
+
+                <div id="watchCartItems">
+
+                    <div class="empty-cart">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <h3>Your cart is empty</h3>
+
+                        <p>
+                            Explore our watch collection and add something
+                            you love.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-summary">
+
+                    <div class="cart-total">
+
+                        <span>Total</span>
+
+                        <h3 id="watchCartTotal">₦0</h3>
+
+                    </div>
+
+                    <button type="button" id="watchCheckoutBtn" class="watch-checkout-btn">
+
+                        Proceed To Checkout
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="yiuboi-footer">
+
+        <div class="container">
+
+            <div class="row g-5 footer-content">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-brand">
+
+                        <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="footer-logo">
+
+                        <h3>YIUBOI</h3>
+
+                        <p>
+                            Where every step counts. Discover footwear and
+                            watches that combine style, confidence and value.
+                        </p>
+
+                        <div class="footer-socials">
+
+                            <a href="https://www.instagram.com/" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@sunkanmeey" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://x.com/" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="https://wa.me/2349035066048" aria-label="WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <div class="footer-column">
+
+                        <h4>Quick Links</h4>
+
+                        <ul>
+
+                            <li><a href="index.html">Home</a></li>
+
+                            <li><a href="index.html#about">About Us</a></li>
+
+                            <li><a href="index.html#how-we-work">How We Work</a></li>
+
+                            <li><a href="index.html#contact">Contact</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHOP -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="footer-column">
+
+                        <h4>Our Collections</h4>
+
+                        <ul>
+
+                            <li><a href="footwear.html">Footwear</a></li>
+
+                            <li><a href="watches.html">Watches</a></li>
+
+                            <li><a href="#watch-series">Watch Series</a></li>
+
+                            <li><a href="#watch-cart">Shopping Cart</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOMER SERVICE -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="footer-column">
+
+                        <h4>Customer Service</h4>
+
+                        <ul>
+
+                            <li><a href="index.html#contact">Get In Touch</a></li>
+
+                            <li><a href="#watch-series">Shop Collection</a></li>
+
+                            <li><a href="#watch-cart">Your Cart</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 YIUBOI. All Rights Reserved.
+                    Where Every Step Counts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+
+    <script src="watches.js"></script>
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+
+</body>
+
+</html>

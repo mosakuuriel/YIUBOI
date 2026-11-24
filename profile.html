@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | YIUBOI</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="drakmode.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand yiuboi-brand">
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar"
+                    aria-controls="yiuboiNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#how-we-work" class="nav-link">How We Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="footwear.html" class="dropdown-item">
+                                        <i class="fa-solid fa-shoe-prints"></i> Footwear
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="watches.html" class="dropdown-item">
+                                        <i class="fa-regular fa-clock"></i> Watches
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="yiuboi-nav-actions">
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <!-- SEARCH -->
+                        <form class="yiuboi-search" id="yiuboiSearchForm">
+
+                            <input type="text" id="yiuboiSearchInput" placeholder="Search sneakers, watches..."
+                                autocomplete="off" aria-label="Search products">
+
+                            <button type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <div class="search-results" id="searchResults"></div>
+
+                        </form>
+
+                        <!-- PROFILE -->
+                        <a href="profile.html" class="yiuboi-profile active" aria-label="My profile">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+    <!-- PROFILE INTRO -->
+    <section class="profile-hero">
+
+        <div class="container">
+
+            <div class="profile-hero-content" data-aos="fade-up">
+
+                <span class="profile-label">WELCOME TO YIUBOI</span>
+
+                <h1>Your Account,<br>
+                    Your <span>Style.</span>
+                </h1>
+
+                <p>
+                    Create an account or sign in to manage your YIUBOI
+                    shopping experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AUTHENTICATION SECTION -->
+    <section class="profile-section">
+
+        <div class="container">
+
+            <div class="profile-container" data-aos="fade-up">
+
+                <!-- FORM HEADING -->
+                <div class="profile-heading">
+
+                    <h2>Welcome Back</h2>
+
+                    <p>Access your YIUBOI account below.</p>
+
+                </div>
+
+
+                <!-- FORM TABS -->
+                <div class="profile-tabs">
+
+                    <button type="button" class="profile-tab active" id="loginTab">
+                        Login
+                    </button>
+
+                    <button type="button" class="profile-tab" id="signupTab">
+                        Create Account
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="profile-form">
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">Email Address</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">Password</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                            <button type="button" class="password-toggle" data-target="loginPassword"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-options">
+
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+
+                        <a href="#" id="forgotPassword">Forgot password?</a>
+
+                    </div>
+
+
+                    <button type="submit" class="profile-submit">
+                        Login to Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+
+                    <p class="form-switch-text">
+                        Don't have an account?
+                        <button type="button" id="showSignup">Sign up</button>
+                    </p>
+
+                </form>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm" class="profile-form" hidden>
+
+                    <div class="form-group">
+
+                        <label for="signupName">Full Name</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">Email Address</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupPhone">Phone Number</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input type="tel" id="signupPhone" placeholder="Enter your phone number" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">Create Password</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+                            <button type="button" class="password-toggle" data-target="signupPassword"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">Confirm Password</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms-checkbox">
+
+                        <input type="checkbox" id="agreeTerms" required>
+
+                        <span>
+                            I agree to the YIUBOI terms and conditions.
+                        </span>
+
+                    </label>
+
+
+                    <button type="submit" class="profile-submit">
+
+                        Create My Account
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <p class="form-switch-text">
+
+                        Already have an account?
+
+                        <button type="button" id="showLogin">
+                            Login
+                        </button>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="yiuboi-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="footer-logo">
+
+                    <h3>YIUBOI</h3>
+
+                    <p>
+                        Where Every Step Counts. Discover footwear and
+                        watches that bring style and confidence together.
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@sunkanmeey" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://x.com/" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="footwear.html">Footwear</a></li>
+                        <li><a href="watches.html">Watches</a></li>
+                        <li><a href="profile.html">My Account</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Customer Care</h4>
+
+                    <ul>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="index.html#about">About YIUBOI</a></li>
+                        <li><a href="index.html#how-we-work">How We Work</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 YIUBOI. All Rights Reserved.
+                </p>
+
+                <p>Where Every Step Counts.</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+
+</html>

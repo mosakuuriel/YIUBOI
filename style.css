@@ -1,0 +1,1594 @@
+/* =====================================
+   YIUBOI BRAND COLOURS
+===================================== */
+
+:root {
+    --aqua-blue: #39C6C4;
+    --cyan-green: #16A89B;
+    --gold: #C6A45B;
+
+    --dark-text: #244B49;
+    --white: #ffffff;
+}
+
+
+/* =====================================
+   GENERAL NAVBAR
+===================================== */
+
+.yiuboi-header {
+    width: 100%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+
+.yiuboi-header .navbar {
+    min-height: 95px;
+    padding: 12px 4%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.yiuboi-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.yiuboi-logo {
+    width: 180px;
+    height: 70px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+
+/* =====================================
+   DESKTOP NAVIGATION
+===================================== */
+
+@media (min-width: 851px) {
+
+    .navbar-expand-custom {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: 1;
+
+        align-items: center;
+        justify-content: space-between;
+
+        margin-left: 45px;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =====================================
+   NAVIGATION LINKS
+===================================== */
+
+.yiuboi-header .nav-link {
+    color: var(--dark-text);
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 4px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.yiuboi-header .nav-link:hover,
+.yiuboi-header .nav-link.active {
+    color: var(--cyan-green);
+}
+
+.yiuboi-header .nav-link.active::after {
+    content: "";
+    position: absolute;
+
+    bottom: 3px;
+    left: 4px;
+
+    width: 18px;
+    height: 2px;
+
+    background: var(--gold);
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   SHOP DROPDOWN
+===================================== */
+
+.yiuboi-header .dropdown-menu {
+    min-width: 150px;
+    padding: 10px;
+
+    border: 1px solid #edf1ef;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.yiuboi-header .dropdown-item {
+    padding: 11px 12px;
+
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.yiuboi-header .dropdown-item i {
+    width: 24px;
+    color: var(--cyan-green);
+}
+
+.yiuboi-header .dropdown-item:hover {
+    background: #eaf9f7;
+    color: var(--cyan-green);
+}
+
+
+/* =====================================
+   SEARCH AND PROFILE
+===================================== */
+
+.yiuboi-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+
+/* SEARCH */
+
+.yiuboi-search {
+    width: 210px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #e1eae8;
+    border-radius: 7px;
+
+    padding: 0 12px;
+    transition: 0.3s ease;
+}
+
+.yiuboi-search:focus-within {
+    border-color: var(--aqua-blue);
+
+    box-shadow: 0 0 0 3px rgba(57, 198, 196, 0.12);
+}
+
+.yiuboi-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 12px;
+    color: var(--dark-text);
+}
+
+.yiuboi-search input::placeholder {
+    color: #9baaa7;
+}
+
+.yiuboi-search button {
+    border: none;
+    background: transparent;
+
+    color: var(--cyan-green);
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* PROFILE */
+
+.yiuboi-profile {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e1eae8;
+    border-radius: 50%;
+
+    color: var(--cyan-green);
+    font-size: 17px;
+
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.yiuboi-profile:hover {
+    background: var(--aqua-blue);
+    border-color: var(--aqua-blue);
+    color: var(--white);
+}
+
+
+/* =====================================
+   BRAND COLOUR LINE
+===================================== */
+
+.yiuboi-colour-line {
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(to right,
+            var(--aqua-blue) 40%,
+            var(--cyan-green) 75%,
+            var(--gold) 100%);
+}
+
+
+
+
+@media (max-width: 850px) {
+
+    .yiuboi-header .navbar {
+        min-height: 80px;
+    }
+
+    .navbar-expand-custom .navbar-collapse:not(.show) {
+        display: none;
+    }
+
+    .navbar-expand-custom .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 20px 0;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 8px;
+        width: 100%;
+    }
+
+    .yiuboi-header .nav-link {
+        padding: 10px 0;
+    }
+
+    .yiuboi-header .nav-link.active::after {
+        left: 0;
+    }
+
+    .yiuboi-header .dropdown-menu {
+        box-shadow: none;
+        border: none;
+        background: #f7fcfb;
+    }
+
+    .yiuboi-nav-actions {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .yiuboi-search {
+        flex: 1;
+        width: auto;
+    }
+
+    .yiuboi-profile {
+        flex-shrink: 0;
+    }
+
+}
+
+
+
+
+@media (max-width: 850px) {
+
+    .yiuboi-logo {
+        width: 145px;
+        height: 60px;
+    }
+
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.yiuboi-hero {
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background: #f8fcfb;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    padding-right: 45px;
+}
+
+/* SMALL LABEL */
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyan-green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero-label-line {
+    width: 30px;
+    height: 2px;
+    background: var(--gold);
+}
+
+
+/* MAIN HEADING */
+
+.hero-content h1 {
+    max-width: 600px;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: var(--cyan-green);
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 480px;
+    color: #788985;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.hero-btn {
+    min-height: 50px;
+    padding: 0 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--cyan-green);
+    color: #ffffff;
+    border: 1px solid var(--cyan-green);
+}
+
+.primary-btn:hover {
+    background: var(--dark-text);
+    border-color: var(--dark-text);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.primary-btn i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.primary-btn:hover i {
+    transform: translateX(5px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--dark-text);
+    border: 1px solid var(--gold);
+}
+
+.secondary-btn:hover {
+    background: var(--gold);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* HERO DETAILS */
+
+.hero-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.hero-detail {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--dark-text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-detail i {
+    color: var(--aqua-blue);
+    font-size: 17px;
+}
+
+
+/* HERO IMAGE AREA */
+
+.hero-image-area {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #edf8f6;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+
+/* IMAGE HOVER EFFECT */
+
+@media (hover: hover) and (pointer: fine) {
+    .hero-image-area:hover .hero-image {
+        transform: scale(1.04);
+    }
+}
+
+
+/* ================= RESPONSIVENESS ================= */
+
+@media (max-width: 850px) {
+
+    .yiuboi-hero {
+        padding: 65px 0;
+    }
+
+    .hero-content {
+        padding-right: 12px;
+        margin-bottom: 45px;
+    }
+
+    .hero-image-area {
+        min-height: 350px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .yiuboi-hero {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    .hero-details {
+        gap: 15px;
+    }
+
+    .hero-image-area {
+        min-height: 280px;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-image,
+    .hero-btn,
+    .primary-btn i {
+        transition: none !important;
+    }
+
+}
+
+.changing-word {
+    display: inline-block;
+    color: var(--cyan-green);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.changing-word.word-out {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+
+.changing-word.word-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* FLOATING CATEGORY BUTTONS */
+
+.floating-category-buttons {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-btn {
+    min-width: 145px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.footwear-float {
+    background: var(--cyan-green);
+    color: #ffffff;
+}
+
+.watches-float {
+    background: var(--dark-text);
+    color: #ffffff;
+}
+
+.floating-btn:hover {
+    transform: translateY(-4px);
+    color: #ffffff;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+    .floating-category-buttons {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .floating-btn {
+        min-width: 125px;
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* ================= HOW WE WORK ================= */
+
+.how-we-work {
+    width: 100%;
+    padding: 100px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* SECTION HEADING */
+
+.how-heading {
+    max-width: 650px;
+    margin: 0 auto 75px;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--cyan-green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.how-heading h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 18px;
+}
+
+.how-heading h2 span {
+    color: var(--cyan-green);
+}
+
+.how-heading p {
+    color: #788985;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* PROCESS WRAPPER */
+
+.process-wrapper {
+    position: relative;
+}
+
+.process-wrapper .row {
+    position: relative;
+}
+
+
+/* CONNECTING LINE */
+
+.process-wrapper .row::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 16.66%;
+    right: 16.66%;
+    height: 2px;
+    background: linear-gradient(to right,
+            var(--aqua-blue),
+            var(--cyan-green),
+            var(--gold));
+}
+
+
+/* PROCESS CARD */
+
+.process-card {
+    min-height: 310px;
+    padding: 30px 25px;
+    background: #f8fcfb;
+    border: 1px solid #e7f1ef;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cyan-green);
+    box-shadow: 0 15px 35px rgba(22, 168, 155, 0.10);
+}
+
+
+/* CARD TOP */
+
+.process-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.process-number {
+    color: var(--cyan-green);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+
+/* PROCESS ICON */
+
+.process-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5f7f4;
+    color: var(--cyan-green);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+
+/* CARD TEXT */
+
+.process-card h3 {
+    color: var(--dark-text);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.process-card p {
+    color: #788985;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* CARD FOOTER */
+
+.process-bottom {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* ================= RESPONSIVENESS ================= */
+
+@media (max-width: 850px) {
+
+    .how-we-work {
+        padding: 75px 0;
+    }
+
+    .how-heading {
+        margin-bottom: 50px;
+    }
+
+    .process-wrapper .row {
+        row-gap: 25px;
+    }
+
+    .process-wrapper .row::before {
+        display: none;
+    }
+
+    .process-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .process-top {
+        margin-bottom: 25px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .how-heading h2 {
+        font-size: 34px;
+    }
+
+    .process-card h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+
+
+/* ================= ABOUT YIUBOI ================= */
+
+.about-yiuboi {
+    width: 100%;
+    padding: 100px 0;
+    background: #f7fbfa;
+    overflow: hidden;
+}
+
+/* IMAGE */
+
+.about-image {
+    width: 100%;
+    height: 480px;
+    background: #e8f4f1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* CONTENT */
+
+.about-content {
+    padding: 25px 20px 25px 45px;
+}
+
+.about-label {
+    display: inline-block;
+    color: var(--cyan-green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    color: var(--dark-text);
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-content h2 span {
+    color: var(--cyan-green);
+}
+
+.about-content h4 {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #788985;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+
+/* FOUNDER SIGNATURE */
+
+.about-signature {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-left: 3px solid var(--cyan-green);
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+.about-signature span {
+    color: var(--dark-text);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-signature small {
+    color: #899792;
+    font-size: 12px;
+}
+
+.about-tagline {
+    color: var(--cyan-green);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 850px) {
+
+    .about-content {
+        padding: 35px 0 0;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .about-yiuboi {
+        padding: 70px 0;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 5% 10%, rgba(57, 198, 196, .18), transparent 30%),
+        radial-gradient(circle at 95% 90%, rgba(198, 164, 91, .14), transparent 30%),
+        linear-gradient(135deg, #103f3d, #164f4a, #0c3433);
+}
+
+/* HEADING */
+
+.contact-heading {
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+
+.contact-heading span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.contact-heading h2 {
+    color: #fff;
+    font-size: clamp(35px, 5vw, 48px);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.contact-heading h2 strong {
+    color: var(--aqua-blue);
+}
+
+.contact-heading p {
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    height: 100%;
+    padding: 45px 35px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 15px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(57, 198, 196, .15),
+            rgba(255, 255, 255, .04));
+
+    color: white;
+}
+
+.contact-small-title {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 20px 0 15px;
+}
+
+.contact-info>p {
+    color: rgba(255, 255, 255, .7);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* CONTACT DETAILS */
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(57, 198, 196, .15);
+    color: var(--aqua-blue);
+    border-radius: 10px;
+}
+
+.contact-detail h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: rgba(255, 255, 255, .65);
+    font-size: 12px;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* SOCIAL LINKS */
+
+.contact-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.contact-socials span {
+    width: 100%;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.contact-socials a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-socials a:hover {
+    background: var(--cyan-green);
+    border-color: var(--cyan-green);
+    transform: translateY(-4px);
+}
+
+
+/* CONTACT FORM */
+
+.contact-form-card {
+    height: 100%;
+    padding: 45px 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
+}
+
+.contact-form-card h3 {
+    color: var(--dark-text);
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-form-card>p {
+    color: #899792;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+
+/* INPUTS */
+
+.contact-input {
+    margin-bottom: 22px;
+}
+
+.contact-input label {
+    display: block;
+    color: var(--dark-text);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.contact-input input,
+.contact-input textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e1ece9;
+    border-radius: 8px;
+    outline: none;
+
+    background: #f8fbfa;
+    color: var(--dark-text);
+    font-size: 13px;
+    font-family: inherit;
+    transition: .3s;
+}
+
+.contact-input textarea {
+    resize: vertical;
+}
+
+.contact-input input:focus,
+.contact-input textarea:focus {
+    border-color: var(--cyan-green);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(22, 168, 155, .08);
+}
+
+.contact-input input::placeholder,
+.contact-input textarea::placeholder {
+    color: #a8b5b1;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-submit {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(100deg, var(--cyan-green), var(--aqua-blue));
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(22, 168, 155, .25);
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 850px) {
+
+    .contact-info,
+    .contact-form-card {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .contact-heading {
+        margin-bottom: 40px;
+    }
+
+    .contact-info h3 {
+        font-size: 24px;
+    }
+
+    .contact-form-card h3 {
+        font-size: 22px;
+    }
+}
+
+/* ================= YIUBOI FOOTER ================= */
+
+.yiuboi-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 0 0;
+
+    background:
+        radial-gradient(circle at 5% 10%, rgba(57, 198, 196, .13), transparent 30%),
+        radial-gradient(circle at 95% 90%, rgba(198, 164, 91, .10), transparent 30%),
+        linear-gradient(135deg, #0b302f, #103f3d, #092b2a);
+
+    color: #fff;
+}
+
+/* BRAND */
+
+.footer-brand img {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.footer-tagline {
+    color: var(--aqua-blue);
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    max-width: 330px;
+    color: rgba(255, 255, 255, .65);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* SOCIAL ICONS */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-socials a:hover {
+    background: var(--cyan-green);
+    border-color: var(--cyan-green);
+    transform: translateY(-4px);
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links h4,
+.footer-newsletter h4 {
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .68);
+    font-size: 13px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: var(--aqua-blue);
+    transform: translateX(5px);
+}
+
+
+/* NEWSLETTER */
+
+.footer-newsletter p {
+    color: rgba(255, 255, 255, .65);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-subscribe {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, .09);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 7px;
+}
+
+.footer-subscribe input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.footer-subscribe input::placeholder {
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer-subscribe button {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    color: white;
+    background: var(--cyan-green);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer-subscribe button:hover {
+    background: var(--gold);
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-top: 75px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, .55);
+    font-size: 12px;
+    margin: 0;
+}
+
+.footer-bottom-tagline {
+    color: var(--gold) !important;
+    font-weight: 700;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 850px) {
+
+    .yiuboi-footer {
+        padding-top: 65px;
+    }
+
+    .footer-bottom {
+        margin-top: 45px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+.yiuboi-stats {
+    background: #123c3b;
+    padding: 100px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.stats-heading {
+    margin-bottom: 55px;
+}
+
+.stats-heading span {
+    color: #39C6C4;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.stats-heading h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.stats-heading p {
+    color: #c5d8d5;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(57, 198, 196, 0.25);
+    border-radius: 18px;
+    padding: 40px 20px;
+    height: 100%;
+    transition: 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-color: #39C6C4;
+    background: rgba(57, 198, 196, 0.1);
+}
+
+.stat-card i {
+    color: #39C6C4;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.stat-card h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.stat-card p {
+    color: #c5d8d5;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+@media (max-width: 850px) {
+    .yiuboi-stats {
+        padding: 70px 0;
+    }
+
+    .stat-card {
+        padding: 30px 15px;
+    }
+}
+
+/* LIVE SEARCH RESULTS */
+
+.yiuboi-search {
+    position: relative;
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.search-result-item {
+    display: block;
+    padding: 13px 16px;
+    color: #244B49 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: #eaf8f5;
+    color: #16A89B !important;
+}
+
+.search-no-result {
+    padding: 14px 16px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* YIUBOI NAVBAR SEARCH ONLY */
+
+.yiuboi-search {
+    position: relative;
+}
+
+
+
+.yiuboi-search .search-results {
+    display: none;
+}

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Explore Footwear Collection | YIUBOI</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="images/yiuboi-logo.png">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="drakmode.css">
+
+
+</head>
+
+
+
+<body>
+    <!-- NAVBAR -->
+    <header class="yiuboi-header">
+
+        <nav class="navbar navbar-expand-custom">
+
+            <div class="container-fluid px-lg-5">
+
+                <a href="index.html" class="navbar-brand yiuboi-brand">
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="yiuboi-logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#yiuboiNavbar"
+                    aria-controls="yiuboiNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="yiuboiNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#how-we-work" class="nav-link">How We Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a href="#" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Shop
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="footwear.html" class="dropdown-item">
+                                        <i class="fa-solid fa-shoe-prints me-2"></i>
+                                        Footwear
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="watches.html" class="dropdown-item">
+                                        <i class="fa-regular fa-clock me-2"></i>
+                                        Watches
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="yiuboi-nav-actions">
+
+                        <button type="button" class="dark-mode-toggle" id="darkModeToggle"
+                            aria-label="Switch to dark mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+
+                        <!-- SEARCH -->
+                        <form class="yiuboi-search" id="yiuboiSearchForm">
+
+                            <input type="text" id="yiuboiSearchInput" placeholder="Search sneakers, watches..."
+                                autocomplete="off" aria-label="Search products">
+
+                            <button type="submit" aria-label="Search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <div class="search-results" id="searchResults"></div>
+
+                        </form>
+
+                        <a href="profile.html" class="yiuboi-profile" aria-label="My profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="yiuboi-colour-line"></div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="explore-hero">
+
+        <div class="explore-hero-content" data-aos="fade-up">
+
+            <span>WELCOME TO YIUBOI FOOTWEAR</span>
+
+            <h1>Find Your Perfect Step.</h1>
+
+            <p>
+                From everyday comfort to timeless elegance,
+                explore footwear designed to complement your
+                lifestyle and express your personal style.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORE COLLECTION -->
+    <section class="explore-section">
+
+        <div class="container">
+
+            <div class="explore-heading" data-aos="fade-up">
+
+                <span>EXPLORE OUR COLLECTION</span>
+
+                <h2>Discover Your Style</h2>
+
+                <p>
+                    Find the right footwear for every occasion.
+                    Your next favourite pair starts here.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- SNEAKERS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/78a7745a54a0d3b5d9751e300dfc5478.jpg" alt="YIUBOI Sneakers Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Sneakers</h3>
+
+                            <p>
+                                Everyday movement meets modern style.
+                                Discover sneakers made for comfort and confidence.
+                            </p>
+
+                            <a href="sneakers.html" class="category-btn">
+                                Explore Sneakers
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMAL SHOES -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/fs1.jpg" alt="YIUBOI Formal Shoes Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Formal Shoes</h3>
+
+                            <p>
+                                Refined footwear for professional settings,
+                                special occasions and timeless appearances.
+                            </p>
+
+                            <a href="formal.html" class="category-btn">
+                                Explore Formal Shoes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CASUAL SHOES -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/cs01.avif" alt="YIUBOI Casual Shoes Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Casual Shoes</h3>
+
+                            <p>
+                                Relaxed, versatile and stylish footwear
+                                for your everyday adventures.
+                            </p>
+
+                            <a href="casual.html" class="category-btn">
+                                Explore Casual Shoes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SANDALS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/san1.jpg" alt="YIUBOI Sandals Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Sandals</h3>
+
+                            <p>
+                                Easygoing footwear that combines
+                                comfort, simplicity and effortless style.
+                            </p>
+
+                            <a href="sandal.html" class="category-btn">
+                                Explore Sandals
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOTS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/bt1.jpg" alt="YIUBOI Boots Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Boots</h3>
+
+                            <p>
+                                Strong character, bold appearance and
+                                footwear that makes a statement.
+                            </p>
+
+                            <a href="boots.html" class="category-btn">
+                                Explore Boots
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SLIDES -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="category-card">
+
+                        <div class="category-image">
+                            <img src="images/sl1.jpg" alt="YIUBOI Slides Collection">
+                        </div>
+
+                        <div class="category-content">
+
+                            <h3>Slides</h3>
+
+                            <p>
+                                Simple, comfortable and practical footwear
+                                for relaxed everyday moments.
+                            </p>
+
+                            <a href="slides.html" class="category-btn">
+                                Explore Slides
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM CALL TO ACTION -->
+    <section class="explore-bottom">
+
+        <div class="container" data-aos="zoom-in">
+
+            <h2>Your Next Favourite Pair Awaits.</h2>
+
+            <p>
+                Explore the YIUBOI footwear collection
+                and find the style that speaks to you.
+            </p>
+
+            <a href="footwear.html">
+                Back to Footwear
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="yiuboi-footer">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <img src="images/yiuboi-logo.png" alt="YIUBOI Logo" class="footer-logo">
+
+                    <p class="footer-description">
+                        YIUBOI brings together style, comfort and quality.
+                        Discover footwear that makes every step count.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <h5>Footwear</h5>
+
+                    <ul>
+                        <li><a href="sneakers.html">Sneakers</a></li>
+                        <li><a href="formal.html">Formal Shoes</a></li>
+                        <li><a href="casual.html">Casual Shoes</a></li>
+                        <li><a href="sandal.html">Sandals</a></li>
+                        <li><a href="boots.html">Boots</a></li>
+                        <li><a href="slides.html">Slides</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <h5>Stay Connected</h5>
+
+                    <p>Connect with YIUBOI on social media.</p>
+
+                    <div class="footer-socials">
+
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@sunkanmeey" target="_blank" rel="noopener noreferrer"
+                            aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@AfricanStoriesAndSuccess" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="https://wa.me/2349035066048" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>&copy; 2026 YIUBOI. All Rights Reserved.</p>
+
+                <span>Where Every Step Counts.</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT LIBRARIES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- CUSTOM JAVASCRIPT -->
+    <script src="explore.js"></script>
+    <script src="search.js"></script>
+    <script src="drakmode.js"></script>
+
+</body>
+
+
+
+</html>

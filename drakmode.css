@@ -1,0 +1,1099 @@
+/* =========================================
+   YIUBOI HOMEPAGE — DARK MODE
+========================================= */
+
+body.dark-mode {
+    background: #101b1b;
+    color: #e8f0ee;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+body.dark-mode .yiuboi-header {
+    background: #101b1b;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .yiuboi-header .nav-link {
+    color: #e8f0ee;
+}
+
+body.dark-mode .yiuboi-header .nav-link:hover,
+body.dark-mode .yiuboi-header .nav-link.active {
+    color: #39C6C4;
+}
+
+body.dark-mode .yiuboi-header .dropdown-menu {
+    background: #203434;
+    border-color: #35504e;
+}
+
+body.dark-mode .yiuboi-header .dropdown-item {
+    color: #e8f0ee;
+}
+
+body.dark-mode .yiuboi-header .dropdown-item:hover {
+    background: #294744;
+    color: #39C6C4;
+}
+
+body.dark-mode .yiuboi-profile {
+    color: #39C6C4;
+    border-color: #35504e;
+}
+
+body.dark-mode .yiuboi-search {
+    background: #203434;
+    border-color: #35504e;
+}
+
+body.dark-mode .yiuboi-search input {
+    color: #ffffff;
+}
+
+body.dark-mode .yiuboi-search input::placeholder {
+    color: #a9bfbb;
+}
+
+body.dark-mode .yiuboi-search button {
+    color: #39C6C4;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+body.dark-mode .yiuboi-hero {
+    background: #101b1b;
+}
+
+body.dark-mode .hero-content h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .hero-content h1 span,
+body.dark-mode .changing-word {
+    color: #39C6C4;
+}
+
+body.dark-mode .hero-label {
+    color: #39C6C4;
+}
+
+body.dark-mode .hero-description {
+    color: #b9cbc7;
+}
+
+body.dark-mode .hero-detail {
+    color: #e0eae7;
+}
+
+body.dark-mode .hero-detail i {
+    color: #39C6C4;
+}
+
+body.dark-mode .secondary-btn {
+    color: #ffffff;
+    border-color: #C6A45B;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: #C6A45B;
+    color: #101b1b;
+}
+
+body.dark-mode .hero-image-area {
+    background: #203434;
+}
+
+/* =========================================
+   FLOATING CATEGORY BUTTONS
+========================================= */
+
+body.dark-mode .footwear-float {
+    background: #16A89B;
+    color: #ffffff;
+}
+
+body.dark-mode .watches-float {
+    background: #244B49;
+    color: #ffffff;
+}
+
+/* =========================================
+   HOW WE WORK
+========================================= */
+
+body.dark-mode .how-we-work {
+    background: #172727;
+}
+
+body.dark-mode .how-heading h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .how-heading p {
+    color: #b9cbc7;
+}
+
+body.dark-mode .section-label {
+    color: #39C6C4;
+}
+
+body.dark-mode .process-card {
+    background: #203434;
+    border-color: #35504e;
+}
+
+body.dark-mode .process-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .process-card p {
+    color: #b9cbc7;
+}
+
+body.dark-mode .process-number {
+    color: #39C6C4;
+}
+
+body.dark-mode .process-icon {
+    background: #294744;
+    color: #39C6C4;
+}
+
+body.dark-mode .process-bottom {
+    color: #C6A45B;
+}
+
+/* =========================================
+   ABOUT YIUBOI
+========================================= */
+
+body.dark-mode .about-yiuboi {
+    background: #101b1b;
+}
+
+body.dark-mode .about-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .about-content h2 span {
+    color: #39C6C4;
+}
+
+body.dark-mode .about-content h3 {
+    color: #39C6C4;
+}
+
+body.dark-mode .about-content h4 {
+    color: #C6A45B;
+}
+
+body.dark-mode .about-content p {
+    color: #b9cbc7;
+}
+
+body.dark-mode .about-label {
+    color: #39C6C4;
+}
+
+body.dark-mode .about-signature span {
+    color: #ffffff;
+}
+
+body.dark-mode .about-signature small {
+    color: #a9bfbb;
+}
+
+body.dark-mode .about-image {
+    background: #203434;
+}
+
+/* =========================================
+   STATISTICS
+   Keep the original dark green appearance.
+========================================= */
+
+body.dark-mode .yiuboi-stats {
+    background: #123c3b;
+}
+
+body.dark-mode .stats-heading h2,
+body.dark-mode .stat-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .stats-heading p,
+body.dark-mode .stat-card p {
+    color: #c5d8d5;
+}
+
+body.dark-mode .stat-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(57, 198, 196, 0.25);
+}
+
+/* =========================================
+   CONTACT SECTION
+   Preserve its original green gradient.
+========================================= */
+
+body.dark-mode .contact-section {
+    background:
+        radial-gradient(circle at 5% 10%, rgba(57, 198, 196, .18), transparent 30%),
+        radial-gradient(circle at 95% 90%, rgba(198, 164, 91, .14), transparent 30%),
+        linear-gradient(135deg, #082c2b, #103d39, #072524);
+}
+
+body.dark-mode .contact-heading h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-heading p {
+    color: #c5d8d5;
+}
+
+body.dark-mode .contact-info {
+    background:
+        linear-gradient(145deg, #16413e, #102f2e);
+    border-color: rgba(57, 198, 196, .2);
+}
+
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-detail h5 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-info>p,
+body.dark-mode .contact-detail p {
+    color: #c5d8d5;
+}
+
+body.dark-mode .contact-icon {
+    background: rgba(57, 198, 196, .15);
+    color: #39C6C4;
+}
+
+body.dark-mode .contact-socials a {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, .2);
+}
+
+/* Contact form */
+
+body.dark-mode .contact-form-card {
+    background: #172727;
+    border: 1px solid #35504e;
+}
+
+body.dark-mode .contact-form-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-form-card>p {
+    color: #b9cbc7;
+}
+
+body.dark-mode .contact-input label {
+    color: #e8f0ee;
+}
+
+body.dark-mode .contact-input input,
+body.dark-mode .contact-input textarea {
+    background: #203434;
+    border-color: #46615e;
+    color: #ffffff;
+}
+
+body.dark-mode .contact-input input::placeholder,
+body.dark-mode .contact-input textarea::placeholder {
+    color: #91aaa5;
+}
+
+body.dark-mode .contact-input input:focus,
+body.dark-mode .contact-input textarea:focus {
+    background: #203434;
+    border-color: #39C6C4;
+    color: #ffffff;
+}
+
+/* =========================================
+   FOOTER
+   Preserve the original dark gradient.
+========================================= */
+
+body.dark-mode .yiuboi-footer {
+    background:
+        radial-gradient(circle at 5% 10%, rgba(57, 198, 196, .13), transparent 30%),
+        radial-gradient(circle at 95% 90%, rgba(198, 164, 91, .10), transparent 30%),
+        linear-gradient(135deg, #071f1e, #0b302f, #061d1c);
+}
+
+body.dark-mode .footer-tagline {
+    color: #39C6C4;
+}
+
+body.dark-mode .footer-description,
+body.dark-mode .footer-newsletter p {
+    color: #c5d8d5;
+}
+
+body.dark-mode .footer-links h4,
+body.dark-mode .footer-newsletter h4 {
+    color: #C6A45B;
+}
+
+body.dark-mode .footer-links a {
+    color: #c5d8d5;
+}
+
+body.dark-mode .footer-links a:hover {
+    color: #39C6C4;
+}
+
+body.dark-mode .footer-bottom {
+    border-color: rgba(255, 255, 255, .15);
+}
+
+/* =========================================
+   LIVE SEARCH RESULTS
+========================================= */
+
+body.dark-mode .search-results {
+    background: #203434;
+    border: 1px solid #35504e;
+}
+
+body.dark-mode .search-result-item {
+    color: #ffffff !important;
+}
+
+body.dark-mode .search-result-item:hover {
+    background: #294744;
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .search-no-result {
+    color: #c5d8d5;
+}
+
+/* =========================================
+   DARK MODE TOGGLE
+========================================= */
+
+.dark-mode-toggle {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C6A45B;
+    border-radius: 50%;
+    background: transparent;
+    color: #C6A45B;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background: #39C6C4;
+    border-color: #39C6C4;
+    color: #101b1b;
+}
+
+/* =========================================
+   SMOOTH TRANSITIONS
+========================================= */
+
+body,
+.yiuboi-header,
+.yiuboi-hero,
+.how-we-work,
+.about-yiuboi,
+.yiuboi-stats,
+.contact-section,
+.yiuboi-footer,
+.process-card,
+.stat-card,
+.contact-info,
+.contact-form-card {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+
+
+/* =========================================
+   YIUBOI GLOBAL DARK MODE
+   Applies across all website pages
+========================================= */
+
+body.dark-mode {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+    color-scheme: dark;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+body.dark-mode .yiuboi-header {
+    background: #091414 !important;
+}
+
+body.dark-mode .yiuboi-header .nav-link,
+body.dark-mode .yiuboi-header .navbar-nav .nav-link {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .yiuboi-header .nav-link:hover,
+body.dark-mode .yiuboi-header .nav-link.active {
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .navbar-toggler {
+    border-color: #39C6C4 !important;
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .dropdown-menu {
+    background: #172727 !important;
+    border: 1px solid #294343 !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background: #24413f !important;
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .yiuboi-profile {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .yiuboi-profile:hover,
+body.dark-mode .yiuboi-profile.active {
+    background: #39C6C4 !important;
+    color: #102b2a !important;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #39C6C4 !important;
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+body.dark-mode .yiuboi-search {
+    background: #203333 !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .yiuboi-search input {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .yiuboi-search input::placeholder {
+    color: #a1b7b3 !important;
+}
+
+body.dark-mode .yiuboi-search button {
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .search-results {
+    background: #172727 !important;
+    border: 1px solid #36504e !important;
+}
+
+body.dark-mode .search-result-item {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .search-result-item:hover {
+    background: #24413f !important;
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .search-no-result {
+    color: #b8ceca !important;
+}
+
+/* =========================================
+   HOMEPAGE
+========================================= */
+
+body.dark-mode .yiuboi-hero,
+body.dark-mode .how-we-work,
+body.dark-mode .about-yiuboi {
+    background-color: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content h2,
+body.dark-mode .how-we-work h2,
+body.dark-mode .about-content h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .hero-content p,
+body.dark-mode .about-content p,
+body.dark-mode .how-we-work p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .process-card {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .process-card h3,
+body.dark-mode .process-card h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .process-card p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .yiuboi-stats {
+    color: #ffffff !important;
+}
+
+/* Homepage contact */
+
+body.dark-mode .contact-section {
+    color: #ffffff !important;
+}
+
+body.dark-mode .contact-section h2,
+body.dark-mode .contact-section h3,
+body.dark-mode .contact-section h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .contact-section p {
+    color: #d0e0dc !important;
+}
+
+body.dark-mode .contact-section form,
+body.dark-mode .contact-section .contact-form {
+    background: #172727 !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .contact-section input,
+body.dark-mode .contact-section textarea,
+body.dark-mode .contact-section select {
+    background: #203333 !important;
+    color: #ffffff !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .contact-section input::placeholder,
+body.dark-mode .contact-section textarea::placeholder {
+    color: #a1b7b3 !important;
+}
+
+/* =========================================
+   FOOTWEAR LANDING PAGE
+========================================= */
+
+body.dark-mode .footwear-categories {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .categories-heading h2,
+body.dark-mode .section-label {
+    color: #ffffff !important;
+}
+
+body.dark-mode .category-card {
+    background: #203333 !important;
+    border-color: #36504e !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .category-content h3,
+body.dark-mode .category-content h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .category-content p {
+    color: #b8ceca !important;
+}
+
+/* =========================================
+   EXPLORE FOOTWEAR PAGE
+========================================= */
+
+body.dark-mode .explore-section {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .explore-heading h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .explore-heading p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .category-card {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .category-content h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .category-content p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .category-image {
+    background: #172727 !important;
+}
+
+/* =========================================
+   SNEAKERS PAGE
+========================================= */
+
+body.dark-mode .sneaker-products,
+body.dark-mode .cart-section {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .products-heading h2,
+body.dark-mode .cart-heading h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .sneaker-card {
+    background: #203333 !important;
+    border-color: #36504e !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .sneaker-details h3,
+body.dark-mode .sneaker-details h4 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .sneaker-details p,
+body.dark-mode .sneaker-details .product-category {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .size-select {
+    background: #172727 !important;
+    color: #ffffff !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .cart-item {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .cart-item h4,
+body.dark-mode .cart-item p {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .empty-cart {
+    color: #b8ceca !important;
+}
+
+/* =========================================
+   CASUAL, FORMAL, BOOTS, SANDALS,
+   SLIDES AND WATCHES
+========================================= */
+
+/* Main collection backgrounds */
+
+body.dark-mode .casual-intro,
+body.dark-mode .casual-products,
+body.dark-mode .formal-intro,
+body.dark-mode .formal-products,
+body.dark-mode .sandals-intro,
+body.dark-mode .sandals-products,
+body.dark-mode .slides-intro,
+body.dark-mode .slides-products,
+body.dark-mode .watch-intro,
+body.dark-mode .watch-series,
+body.dark-mode .boots-intro,
+body.dark-mode .boots-products {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+/* Collection headings */
+
+body.dark-mode .casual-products-heading h2,
+body.dark-mode .formal-products-heading h2,
+body.dark-mode .sandals-section-heading h2,
+body.dark-mode .slides-section-heading h2,
+body.dark-mode .watch-section-heading h2,
+body.dark-mode .boots-section-heading h2 {
+    color: #ffffff !important;
+}
+
+/* Product cards */
+
+body.dark-mode .casual-product-card,
+body.dark-mode .formal-product-card,
+body.dark-mode .sandals-card,
+body.dark-mode .slides-card,
+body.dark-mode .watch-card,
+body.dark-mode .boots-product-card {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .product-info h3,
+body.dark-mode .product-info h4,
+body.dark-mode .casual-card-content h3,
+body.dark-mode .formal-card-content h3,
+body.dark-mode .sandals-card-content h3,
+body.dark-mode .slides-card-content h3,
+body.dark-mode .watch-details h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .product-category {
+    color: #a1b7b3 !important;
+}
+
+body.dark-mode .product-price {
+    color: #39C6C4 !important;
+}
+
+/* Product image backgrounds */
+
+body.dark-mode .product-image,
+body.dark-mode .sandals-image,
+body.dark-mode .slides-image,
+body.dark-mode .watch-image {
+    background: #172727 !important;
+}
+
+/* Product sizes */
+
+body.dark-mode .product-size,
+body.dark-mode .sandals-size,
+body.dark-mode .slides-size {
+    color: #e5eeee !important;
+}
+
+/* =========================================
+   WATCHES PAGE
+========================================= */
+
+body.dark-mode .watch-cart-section {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .watch-cart-box {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .watch-cart-item,
+body.dark-mode .cart-product {
+    background: #172727 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .watch-cart-item h4,
+body.dark-mode .watch-cart-item p,
+body.dark-mode .cart-item-details {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .quantity-btn {
+    background: #203333 !important;
+    color: #ffffff !important;
+    border-color: #36504e !important;
+}
+
+/* =========================================
+   CART SECTIONS
+========================================= */
+
+body.dark-mode .casual-cart-section,
+body.dark-mode .formal-cart-section,
+body.dark-mode .sandals-cart-section,
+body.dark-mode .slides-cart-section,
+body.dark-mode .cart-section {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .casual-cart-section h2,
+body.dark-mode .formal-cart-section h2,
+body.dark-mode .sandals-cart-section h2,
+body.dark-mode .slides-cart-section h2,
+body.dark-mode .cart-heading h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .sandals-cart-box,
+body.dark-mode .slides-cart-box,
+body.dark-mode .cart-summary,
+body.dark-mode .cart-total {
+    background: #203333 !important;
+    color: #e5eeee !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode #cartItems {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .empty-cart {
+    color: #a1b7b3 !important;
+}
+
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+body.dark-mode .profile-section {
+    background: #101b1b !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .profile-container {
+    background: #172727 !important;
+    color: #e5eeee !important;
+    border: 1px solid #294343 !important;
+}
+
+body.dark-mode .profile-heading h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .profile-heading p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .profile-tabs {
+    background: #203333 !important;
+}
+
+body.dark-mode .profile-tab {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .profile-tab.active {
+    background: #39C6C4 !important;
+    color: #102b2a !important;
+}
+
+body.dark-mode .form-group label {
+    color: #e5eeee !important;
+}
+
+body.dark-mode .input-wrapper {
+    background: #203333 !important;
+    border-color: #36504e !important;
+}
+
+body.dark-mode .input-wrapper input {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .input-wrapper input::placeholder {
+    color: #a1b7b3 !important;
+}
+
+body.dark-mode .input-wrapper>i {
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .password-toggle {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .remember-me,
+body.dark-mode .terms-checkbox,
+body.dark-mode .form-switch-text {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .form-options a,
+body.dark-mode .form-switch-text button {
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .form-options a:hover,
+body.dark-mode .form-switch-text button:hover {
+    color: #C6A45B !important;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* Keep the existing dark green footer colours */
+
+body.dark-mode .yiuboi-footer {
+    background: #0d302f !important;
+    color: #e5eeee !important;
+}
+
+body.dark-mode .yiuboi-footer h3,
+body.dark-mode .yiuboi-footer h4,
+body.dark-mode .yiuboi-footer h5 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .yiuboi-footer p {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .yiuboi-footer a,
+body.dark-mode .yiuboi-footer a:link,
+body.dark-mode .yiuboi-footer a:visited {
+    color: #b8ceca !important;
+}
+
+body.dark-mode .yiuboi-footer a:hover {
+    color: #39C6C4 !important;
+}
+
+body.dark-mode .footer-bottom {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode .footer-bottom p,
+body.dark-mode .footer-bottom span {
+    color: #9db7b2 !important;
+}
+
+/* =========================================
+   SHARED BUTTONS AND FORM CONTROLS
+========================================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    color-scheme: dark;
+}
+
+body.dark-mode input:not([type="checkbox"]):not([type="radio"]),
+body.dark-mode textarea,
+body.dark-mode select {
+    border-color: #36504e;
+}
+
+body.dark-mode ::selection {
+    background: #39C6C4;
+    color: #102b2a;
+}
+
+/* =====================================
+   PAYMENT PAGE — DARK MODE
+===================================== */
+
+body.dark-mode {
+    background: #102F32;
+    color: #ffffff;
+}
+
+body.dark-mode .payment-header,
+body.dark-mode .payment-footer {
+    background: #123c3b;
+    color: #ffffff;
+}
+
+body.dark-mode .payment-hero {
+    background: #123c3b;
+    color: #ffffff;
+}
+
+body.dark-mode .payment-section {
+    background: #102F32;
+    color: #ffffff;
+}
+
+body.dark-mode .payment-card,
+body.dark-mode .payment-form,
+body.dark-mode .payment-summary,
+body.dark-mode .payment-method-card {
+    background: #174746;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .payment-header a,
+body.dark-mode .payment-footer a {
+    color: #ffffff;
+}
+
+body.dark-mode .payment-section h1,
+body.dark-mode .payment-section h2,
+body.dark-mode .payment-section h3,
+body.dark-mode .payment-section p,
+body.dark-mode .payment-section label {
+    color: #ffffff;
+}
+
+body.dark-mode .payment-section input,
+body.dark-mode .payment-section select,
+body.dark-mode .payment-section textarea {
+    background: #102F32;
+    color: #ffffff;
+    border-color: #416b68;
+}
+
+body.dark-mode .payment-section input::placeholder,
+body.dark-mode .payment-section textarea::placeholder {
+    color: #a8bfbb;
+}
+
+body.dark-mode .payment-section input:focus,
+body.dark-mode .payment-section select:focus,
+body.dark-mode .payment-section textarea:focus {
+    border-color: #39C6C4;
+    box-shadow: 0 0 0 0.2rem rgba(57, 198, 196, 0.15);
+}
+
+body.dark-mode .payment-summary hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .payment-summary strong,
+body.dark-mode .payment-summary span {
+    color: #ffffff;
+}
+
+body.dark-mode .payment-progress {
+    background: #244f4d;
+}

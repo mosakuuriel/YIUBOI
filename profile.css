@@ -1,0 +1,809 @@
+:root {
+    --aqua-blue: #39C6C4;
+    --cyan-green: #16A89B;
+    --gold: #C6A45B;
+    --dark-text: #244B49;
+    --dark-bg: #123c3b;
+    --white: #ffffff;
+    --light-bg: #f5faf9;
+    --muted-text: #718582;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--dark-text);
+    background: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Manrope", sans-serif;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.yiuboi-header {
+    width: 100%;
+    background: var(--dark-bg);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 12px 0;
+}
+
+.navbar>.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yiuboi-brand {
+    display: flex;
+    align-items: center;
+}
+
+.yiuboi-logo {
+    width: 115px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.navbar-collapse {
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-nav .nav-link {
+    color: #e5f3f1 !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 10px !important;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--aqua-blue) !important;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+    padding: 10px 14px;
+    color: var(--dark-text);
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.dropdown-item:hover {
+    background: #e9f8f6;
+    color: var(--cyan-green);
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+}
+
+.yiuboi-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.yiuboi-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 4px 7px 4px 15px;
+    width: 220px;
+}
+
+.yiuboi-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--dark-text);
+    font-size: 12px;
+    padding: 7px 0;
+}
+
+.yiuboi-search button {
+    border: none;
+    background: transparent;
+    color: var(--cyan-green);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.yiuboi-profile {
+    width: 39px;
+    height: 39px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.yiuboi-profile:hover,
+.yiuboi-profile.active {
+    background: var(--aqua-blue);
+    border-color: var(--aqua-blue);
+    color: var(--dark-bg);
+}
+
+.yiuboi-colour-line {
+    height: 3px;
+    background: linear-gradient(to right,
+            var(--aqua-blue),
+            var(--cyan-green),
+            var(--gold));
+}
+
+/* Search suggestions */
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    min-width: 220px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.search-result-item {
+    display: block;
+    padding: 13px 16px;
+    color: var(--dark-text) !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: #eaf8f5;
+    color: var(--cyan-green) !important;
+}
+
+.search-no-result {
+    padding: 14px 16px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* Desktop navbar */
+
+.navbar-toggler {
+    display: none;
+}
+
+/* =========================
+   PROFILE HERO
+========================= */
+
+.profile-hero {
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(110deg,
+            rgba(18, 60, 59, 0.97),
+            rgba(18, 60, 59, 0.88),
+            rgba(22, 168, 155, 0.78));
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    right: 8%;
+    top: -100px;
+}
+
+.profile-hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    right: 15%;
+    bottom: -130px;
+}
+
+.profile-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 65px 0;
+}
+
+.profile-label {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.profile-hero h1 {
+    color: white;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.profile-hero h1 span {
+    color: var(--aqua-blue);
+}
+
+.profile-hero p {
+    max-width: 470px;
+    color: #d5e7e4;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+.profile-section {
+    padding: 90px 15px;
+    background: var(--light-bg);
+}
+
+.profile-container {
+    max-width: 510px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(18, 60, 59, 0.08);
+}
+
+.profile-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-heading h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--dark-bg);
+    margin-bottom: 8px;
+}
+
+.profile-heading p {
+    color: var(--muted-text);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =========================
+   PROFILE TABS
+========================= */
+
+.profile-tabs {
+    display: flex;
+    background: #edf5f3;
+    border-radius: 9px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.profile-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px;
+    color: var(--muted-text);
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-tab.active {
+    background: var(--dark-bg);
+    color: white;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.profile-form {
+    width: 100%;
+}
+
+.profile-form[hidden] {
+    display: none !important;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 9px;
+}
+
+.input-wrapper {
+    width: 100%;
+    min-height: 51px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    border: 1px solid #dce8e5;
+    border-radius: 8px;
+    background: #fbfdfd;
+    transition: 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--cyan-green);
+    box-shadow: 0 0 0 3px rgba(22, 168, 155, 0.09);
+}
+
+.input-wrapper>i {
+    color: var(--cyan-green);
+    font-size: 14px;
+}
+
+.input-wrapper input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--dark-text);
+    font-size: 13px;
+    padding: 14px 0;
+}
+
+.input-wrapper input::placeholder {
+    color: #a0b0ad;
+}
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: var(--muted-text);
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Form options */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 25px;
+    font-size: 12px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted-text);
+}
+
+.remember-me input,
+.terms-checkbox input {
+    accent-color: var(--cyan-green);
+}
+
+.form-options a {
+    color: var(--cyan-green);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.form-options a:hover {
+    color: var(--dark-bg);
+}
+
+/* Terms */
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--muted-text);
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 5px 0 22px;
+}
+
+.terms-checkbox input {
+    margin-top: 3px;
+}
+
+/* Submit button */
+
+.profile-submit {
+    width: 100%;
+    min-height: 52px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cyan-green);
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-submit i {
+    margin-left: 8px;
+}
+
+.profile-submit:hover {
+    background: var(--dark-bg);
+    transform: translateY(-2px);
+}
+
+/* Switch text */
+
+.form-switch-text {
+    text-align: center;
+    margin: 23px 0 0;
+    color: var(--muted-text);
+    font-size: 13px;
+}
+
+.form-switch-text button {
+    border: none;
+    background: transparent;
+    color: var(--cyan-green);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.form-switch-text button:hover {
+    color: var(--dark-bg);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.yiuboi-footer {
+    background: var(--dark-bg);
+    color: #b8ceca;
+    padding: 65px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 55px;
+    padding-bottom: 45px;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-logo {
+    width: 80px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.footer-brand h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #b8ceca;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: var(--aqua-blue);
+    color: var(--dark-bg);
+    border-color: var(--aqua-blue);
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.yiuboi-footer ul,
+.yiuboi-footer li {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 0 12px !important;
+}
+
+.yiuboi-footer li::marker {
+    content: "";
+}
+
+.yiuboi-footer a,
+.yiuboi-footer a:link,
+.yiuboi-footer a:visited {
+    color: #b8ceca !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.yiuboi-footer .footer-socials a {
+    color: white !important;
+}
+
+.yiuboi-footer a:hover,
+.yiuboi-footer a:focus {
+    color: var(--aqua-blue) !important;
+    text-decoration: none !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #91aaa5;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media (min-width: 851px) {
+
+    .navbar-expand-custom {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-toggler {
+        display: none !important;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .navbar-toggler {
+        display: block !important;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 7px 10px;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        padding: 20px 0 12px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        gap: 3px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0 !important;
+    }
+
+    .yiuboi-nav-actions {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+
+    .yiuboi-search {
+        width: min(300px, 85%);
+    }
+
+    .profile-hero {
+        min-height: 300px;
+    }
+
+    .profile-section {
+        padding: 70px 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================
+   SMALL SCREENS
+========================= */
+
+@media (max-width: 576px) {
+
+    .yiuboi-logo {
+        width: 95px;
+        height: 48px;
+    }
+
+    .profile-hero {
+        min-height: 280px;
+    }
+
+    .profile-hero-content {
+        padding: 50px 10px;
+    }
+
+    .profile-hero h1 {
+        font-size: 39px;
+    }
+
+    .profile-hero p {
+        font-size: 13px;
+    }
+
+    .profile-section {
+        padding: 55px 15px;
+    }
+
+    .profile-container {
+        padding: 30px 20px;
+    }
+
+    .profile-heading h2 {
+        font-size: 24px;
+    }
+
+    .form-options {
+        font-size: 11px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .profile-container {
+        padding: 25px 15px;
+    }
+
+    .profile-tabs button {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
