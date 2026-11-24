@@ -383,13 +383,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 JSON.stringify(result.order || result)
             );
 
+            // CARD PAYMENT THROUGH PAYSTACK
 
+            if (paymentMethod === "card") {
+
+                const paystackResponse = await fetch(
+                    `${API_URL}/paystack/initialize`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${token}`
+                        },
+                        body: JSON.stringify({
+                            orderId: result.order._id
+                        })
+                    }
+                );
+
+                const paystackData = await paystackResponse.json();
+
+                if (!paystackResponse.ok) {
+                    throw new Error(
+                        paystackData.message || "Unable to start card payment."
+                    );
+                }
+
+                window.location.href = paystackData.authorizationUrl;
+                return;
+            }
+
+            // BANK TRANSFER
             alert(
                 "Your order has been saved successfully!\n\n" +
-                "Your order is currently PENDING PAYMENT.\n\n" +
-                "It will appear in the YIUBOI admin dashboard."
+                "Your order is PENDING PAYMENT.\n\n" +
+                "Please transfer to the OPAY account displayed."
             );
-
 
             placeOrderBtn.textContent = "Order Saved";
 
@@ -406,6 +435,46 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+
+    // =====================================
+    // VERIFY PAYSTACK PAYMENT ON RETURN
+    // =====================================
+
+    const paymentParams = new URLSearchParams(window.location.search);
+    const paymentReference = paymentParams.get("reference");
+
+    if (paymentReference) {
+        (async function () {
+            try {
+                const token = localStorage.getItem("yiuboiToken");
+
+                const response = await fetch(
+                    `${API_URL}/paystack/verify/${encodeURIComponent(paymentReference)}`,
+                    {
+                        method: "GET",
+                        headers: {
+                            "Authorization": `Bearer ${token}`
+                        }
+                    }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || "Payment verification failed.");
+                }
+
+                alert("Payment successful! Your YIUBOI order is now PAID.");
+
+                localStorage.removeItem("yiuboiPendingOrder");
+
+                window.history.replaceState({}, document.title, window.location.pathname);
+
+            } catch (error) {
+                alert(error.message || "Unable to verify your payment.");
+            }
+        })();
+    }
 
 
     // INITIALIZE

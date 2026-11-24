@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const Order = require("../models/order");
 const User = require("../models/user");
 const { verifyAdmin } = require("../middleware/authMiddleware");
+const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
 
 // =====================================
 // CUSTOMER AUTHENTICATION
@@ -164,4 +165,165 @@ router.patch("/admin/:orderId/payment", verifyAdmin, async (req, res) => {
     }
 });
 
+// =====================================
+// PAYSTACK CARD PAYMENT INITIALIZATION
+// =====================================
+
+router.post("/paystack/initialize", verifyCustomer, async (req, res) => {
+    try {
+        const { orderId } = req.body;
+
+        if (!PAYSTACK_SECRET_KEY) {
+            return res.status(500).json({
+                message: "Paystack secret key is not configured."
+            });
+        }
+
+        const order = await Order.findOne({
+            _id: orderId,
+            user: req.user._id
+        });
+
+        if (!order) {
+            return res.status(404).json({
+                message: "Order not found."
+            });
+        }
+
+        if (order.paymentMethod !== "card") {
+            return res.status(400).json({
+                message: "This order is not a card payment."
+            });
+        }
+
+        if (order.paymentStatus === "paid") {
+            return res.status(400).json({
+                message: "This order has already been paid."
+            });
+        }
+
+        const customer = await User.findById(req.user._id);
+
+        const email = order.delivery.email || customer?.email;
+
+        if (!email) {
+            return res.status(400).json({
+                message: "An email address is required for card payment."
+            });
+        }
+
+        const paystackResponse = await fetch(
+            "https://api.paystack.co/transaction/initialize",
+            {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${PAYSTACK_SECRET_KEY}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    amount: Math.round(order.total * 100),
+                    currency: "NGN",
+                    callback_url: "https://yiuboi.netlify.app/payment.html",
+                    reference: `YIU-${order._id}-${Date.now()}`,
+                    metadata: {
+                        orderId: order._id.toString()
+                    }
+                })
+            }
+        );
+
+        const data = await paystackResponse.json();
+
+        if (!paystackResponse.ok || !data.status) {
+            return res.status(400).json({
+                message: data.message || "Unable to initialize payment."
+            });
+        }
+
+        order.paymentReference = data.data.reference;
+        await order.save();
+
+        return res.json({
+            message: "Payment initialized successfully.",
+            authorizationUrl: data.data.authorization_url,
+            reference: data.data.reference
+        });
+
+    } catch (error) {
+        console.error("PAYSTACK INITIALIZATION ERROR:", error);
+
+        return res.status(500).json({
+            message: "Unable to initialize card payment."
+        });
+    }
+});
+
+
+// =====================================
+// PAYSTACK PAYMENT VERIFICATION
+// =====================================
+
+router.get("/paystack/verify/:reference", verifyCustomer, async (req, res) => {
+    try {
+        const reference = req.params.reference;
+
+        const order = await Order.findOne({
+            paymentReference: reference,
+            user: req.user._id
+        });
+
+        if (!order) {
+            return res.status(404).json({
+                message: "Order not found."
+            });
+        }
+
+        const response = await fetch(
+            `https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`,
+            {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${PAYSTACK_SECRET_KEY}`
+                }
+            }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || !result.status) {
+            return res.status(400).json({
+                message: "Unable to verify payment."
+            });
+        }
+
+        const transaction = result.data;
+
+        if (
+            transaction.status !== "success" ||
+            transaction.currency !== "NGN" ||
+            transaction.amount !== Math.round(order.total * 100)
+        ) {
+            return res.status(400).json({
+                message: "Payment has not been successfully verified."
+            });
+        }
+
+        order.paymentStatus = "paid";
+        await order.save();
+
+        return res.json({
+            message: "Payment verified successfully.",
+            paymentStatus: "paid",
+            order
+        });
+
+    } catch (error) {
+        console.error("PAYSTACK VERIFICATION ERROR:", error);
+
+        return res.status(500).json({
+            message: "Unable to verify payment."
+        });
+    }
+});
 module.exports = router;

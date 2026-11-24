@@ -501,8 +501,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         </span>
                     </td>
 
-                    <td>${escapeHTML(orderStatus.toUpperCase())}</td>
-                </tr>
+<td>${escapeHTML(orderStatus.toUpperCase())}</td>
+
+<td>
+    ${paymentStatus === "paid"
+                    ? '<span class="badge bg-success">Confirmed</span>'
+                    : `<button class="btn btn-success btn-sm confirm-payment-btn"
+            data-id="${escapeHTML(order._id)}">
+            Confirm Payment
+          </button>`
+                }
+</td>                </tr>
             `;
 
         }).join("");
@@ -595,7 +604,65 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
+    // =====================================
+    // CONFIRM CUSTOMER PAYMENT
+    // =====================================
 
+    document.addEventListener("click", async function (event) {
+
+        const button = event.target.closest(".confirm-payment-btn");
+
+        if (!button) return;
+
+        const orderId = button.dataset.id;
+
+        const confirmAction = confirm(
+            "Have you verified that this payment has entered your OPAY account?"
+        );
+
+        if (!confirmAction) return;
+
+        const token = localStorage.getItem(TOKEN_KEY);
+
+        button.disabled = true;
+        button.textContent = "Updating...";
+
+        try {
+
+            const response = await fetch(
+                `${API_BASE}/order/admin/${orderId}/payment`,
+                {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        paymentStatus: "paid"
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || "Payment confirmation failed.");
+            }
+
+            alert("Payment successfully confirmed!");
+
+            loadOrders();
+
+        } catch (error) {
+
+            alert(error.message);
+
+            button.disabled = false;
+            button.textContent = "Confirm Payment";
+
+        }
+
+    });
 
     // INITIALIZE
 
